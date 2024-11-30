@@ -33,5 +33,16 @@ hedge_fund_portfolio = {
 }
 
 
+#read write update del
 apple_value=hedge_fund_portfolio.get('investments')[0].get('holdings')[0].get('average_buy_price')
 print(apple_value)
+
+yield_value=hedge_fund_portfolio.get('investments')[1].get('holdings')[0].get('yield')
+print(yield_value)
+
+a={"quantity": 6000}
+hedge_fund_portfolio.get('investments')[0].get('holdings')[1].update(a)
+print(hedge_fund_portfolio.get('investments')[0].get('holdings')[1])
+
+hedge_fund_portfolio.get('investments')[2].get('holdings')[0].get('details').update({'strike_price':1700})
+print(hedge_fund_portfolio.get('investments')[2].get('holdings')[0].get('details').get('strike_price'))
