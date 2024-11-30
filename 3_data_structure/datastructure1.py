@@ -24,7 +24,7 @@ stocks=['amzn','tsla']
 stocks.insert(10,88)
 print(stocks)
 
-s1='amzn--tsla--goog--nifty'
+s1='amzn,tsla,goog,nifty'
 w=s1.split(',')
 print(w)
 
@@ -35,3 +35,26 @@ a='  ab c  '
 print(a.strip())
 
 s1='amzn--tsla--goog--nifty'
+l4=s1.split('--')
+
+# last=l4.pop(-1)
+# first=l4.pop(0)
+
+# l4.insert(0,last)
+# l4.append(first)
+# print(l4)
+
+last=l4[-1]
+first=l4[0]
+l4[-1]=first
+l4[0]=last
+print(l4)
+
+
+t1=(44,5,6,7,'tsla')
+print(t1[0:3])
+i=t1.index(7)
+print(i)
+#diff between list and tuple
+#list is mutable and tuple is not
+#list uses [] and tuple uses ()
