@@ -88,4 +88,5 @@ for i in range(len(prices)):
     num=num + (prices[i]*volumes[i])
 vwap=num/cum_vol
 vwap=round(vwap,2)
+print('last')
 print(vwap)
