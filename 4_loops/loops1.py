@@ -1,20 +1,20 @@
 
 #loop iteration
-# l1=[5,6,7,8,9]
+l1=[5,6,7,8,9]
 
-# #type 1 me
-# total=0
-# for i in l1:
-#     total=total+i
-#     print(total)
+#type 1 me
+total=0
+for i in l1:
+    total=total+i
+    print(total)
 
-# print(total//len(l1))
+print(total//len(l1))
 
 
-#type 2
-# print(list(range(5)))
-# for i in range(100):
-#     print('hello')
+# type 2
+print(list(range(5)))
+for i in range(100):
+    print('hello')
 
 
 # even=[]
@@ -24,10 +24,10 @@
 # print(even)
 
 #type 3 loop
-# l1=['amzn','tsla','goog','nifty','ongc']
+l1=['amzn','tsla','goog','nifty','ongc']
 
-# for i in range(len(l1)):
-#     print(l1[i])
+for i in range(len(l1)):
+    print(l1[i])
 
 
 # pnl=[+10, -20, +15, +30, -5]
@@ -69,24 +69,24 @@ atm_strike=l1[0]
 #         lowest_diff=d
 #         atm_strike=s
 
-for s in range(len(l1)):
+# for s in range(len(l1)):
 
-    d=abs(l1[s]-stock_price)
-    if lowest_diff>=d:
-        lowest_diff=d
-        atm_strike=l1[s]
+#     d=abs(l1[s]-stock_price)
+#     if lowest_diff>=d:
+#         lowest_diff=d
+#         atm_strike=l1[s]
 
-print(atm_strike)
+# print(atm_strike)
 
-prices=[100, 105, 110]
-volumes=[200, 150, 300,888]
+# prices=[100, 105, 110]
+# volumes=[200, 150, 300,888]
 
-cum_vol=sum(volumes)
-print(cum_vol)
-num=0
-for i in range(len(prices)):
-    num=num + (prices[i]*volumes[i])
-vwap=num/cum_vol
-vwap=round(vwap,2)
-print('last')
-print(vwap)
+# cum_vol=sum(volumes)
+# print(cum_vol)
+# num=0
+# for i in range(len(prices)):
+#     num=num + (prices[i]*volumes[i])
+# vwap=num/cum_vol
+# vwap=round(vwap,2)
+# print('last')
+# print(vwap)
