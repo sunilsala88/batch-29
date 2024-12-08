@@ -29,15 +29,27 @@
 
 stock_prices={'goog':400,'tsla':900,'amzn':690,'nifty':1000}
 
-portfolio=[]
-while True:
-    s=input('enter the stock name')
-    if s.upper()=='Q':
-        break
-    found=stock_prices.get(s)
-    if found:
-        portfolio.append(s)
-    else:
-        print('we dont have this stock')
-print(portfolio)
+# portfolio=[]
+# while True:
+#     s=input('enter the stock name')
+#     if s.upper()=='Q':
+#         break
+#     found=stock_prices.get(s)
+#     if found:
+#         portfolio.append(s)
+#     else:
+#         print('we dont have this stock')
+# print(portfolio)
 
+
+
+
+investment=1000
+current_money=1000
+year=0
+while True:
+    if current_money>2*investment:
+        break
+    current_money=current_money+(current_money*0.08)
+    year=year+1
+print(year)
