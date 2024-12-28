@@ -84,4 +84,114 @@ book1.read()
 book1.write()
 
 
-#class car
+#class circle
+
+
+
+
+class Circle:
+    PI=3.14
+
+    def __init__(self,r):
+        self.radius = r
+    
+    def area(self):
+        return self.PI * self.radius * self.radius
+
+    def circumference(self):
+        return 2 * self.PI * self.radius
+
+circle1 = Circle(7)
+circle2 = Circle(14)
+
+
+print(circle1.radius)
+print(circle2.radius)
+
+print(circle1.area())
+print(circle2.area())
+
+
+class BankAccount:
+    bank_name='jpmorgan'
+
+    def __init__(self,acc_no,ini_bal):
+        self.account_no=acc_no
+        self.balance=ini_bal
+
+    def deposit(self,amount:int):
+        try:
+            if amount>0:
+                
+                    self.balance=self.balance+amount
+                    return self.balance
+            else:
+                print('invalid amount')
+        except:
+            print('invalid amount')
+
+    def withdraw(self,amount:int):
+        if amount<self.balance:
+            self.balance=self.balance-amount
+            return self.balance
+        else:
+            print('invalid amount')
+
+    def get_balance(self):
+        return self.balance
+    
+
+acc1=BankAccount(450,1000)
+acc2=BankAccount(451,2000)
+
+print(acc1.get_balance())
+acc1.deposit('500')
+acc1.deposit(5000)
+print(acc1.get_balance())
+
+acc1.withdraw(2000)
+print(acc1.get_balance())
+
+
+
+class Broker:
+    stock_prices={'goog':500,'tsla':200,'nifty':900}
+
+    def __init__(self,name,acc_no,ini_bal):
+        self.name=name
+        self.account_number=acc_no
+        self.wallet=ini_bal
+        self.porfolio={}
+    
+    def __str__(self):
+        return self.name
+    
+    def buy(self,stock_name):
+        found=self.stock_prices.get(stock_name)
+        if found:
+            self.porfolio.update({stock_name:found})
+            self.wallet=self.wallet-found
+        else:
+            print('invalid stock name')
+    def sell(self,stock_name):
+        found=self.porfolio.get(stock_name)
+        if found:
+            self.porfolio.pop(stock_name)
+            self.wallet=self.wallet+found
+        else:
+            print('invalid stock name')
+
+    def get_portfolio(self):
+        for i,j in self.porfolio.items():
+            print(f'{i}:{j}')
+
+acc1=Broker('sunil',234,1000)
+acc2=Broker('matt',456,1000)
+
+
+
+
+acc1.buy('goog')
+acc1.get_portfolio()
+
+print(acc1)
