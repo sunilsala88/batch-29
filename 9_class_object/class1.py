@@ -3,6 +3,8 @@
 
 #procedural prog
 
+#oops
+#object oriented programming
 
 #what is class
 #class is a blueprint for the object
@@ -23,7 +25,13 @@
 #method is a function that is inside the class
 
 #what is constructor
-#constructor is a special method that is called when the object is created
+#constructor is a special method that is called when the object is created (__init__)
+
+
+#self
+#first parameter of the method is self
+#self is a reference to the current instance of the class
+#self is used to access the attributes and methods of the class
 
 class Dog:
     sound = "bark" 
@@ -53,10 +61,15 @@ print(dog2.name)
 class Book:
     material = "paper"
 
+    #constructor
     def __init__(self,title,author):
         self.title = title
         self.author = author
 
+    def read(self):
+        print(f'reading the book {self.title}')
+    def write(self):
+        print(f'writing in the book {self.title}')
 
 book1 = Book('Harry Potter', 'J.K. Rowling')
 book2 = Book('Lord of the Rings', 'J.R.R. Tolkien')
@@ -66,6 +79,9 @@ print(book2.material)
 
 print(book1.title)
 print(book2.title)
+
+book1.read()
+book1.write()
 
 
 #class car
