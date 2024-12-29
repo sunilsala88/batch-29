@@ -33,6 +33,7 @@
 #self is a reference to the current instance of the class
 #self is used to access the attributes and methods of the class
 
+
 class Dog:
     sound = "bark" 
 
@@ -189,9 +190,11 @@ acc1=Broker('sunil',234,1000)
 acc2=Broker('matt',456,1000)
 
 
+# acc1.buy('goog')
+Broker.buy(acc1,'goog')
 
 
-acc1.buy('goog')
 acc1.get_portfolio()
 
 print(acc1)
+
