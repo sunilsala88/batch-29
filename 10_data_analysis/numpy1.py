@@ -51,3 +51,5 @@ print(a4)
 a5=np.arange(100,200,5)
 print(a5)
 print(a5[-3:])
+
+
