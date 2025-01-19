@@ -1,0 +1,123 @@
+,0
+address1,1 Tesla Road
+city,Austin
+state,TX
+zip,78725
+country,United States
+phone,512 516 8177
+website,https://www.tesla.com
+industry,Auto Manufacturers
+industryKey,auto-manufacturers
+industryDisp,Auto Manufacturers
+sector,Consumer Cyclical
+sectorKey,consumer-cyclical
+sectorDisp,Consumer Cyclical
+longBusinessSummary,"Tesla, Inc. designs, develops, manufactures, leases, and sells electric vehicles, and energy generation and storage systems in the United States, China, and internationally. The company operates in two segments, Automotive, and Energy Generation and Storage. The Automotive segment offers electric vehicles, as well as sells automotive regulatory credits; and non-warranty after-sales vehicle, used vehicles, body shop and parts, supercharging, retail merchandise, and vehicle insurance services. This segment also provides sedans and sport utility vehicles through direct and used vehicle sales, a network of Tesla Superchargers, and in-app upgrades; purchase financing and leasing services; services for electric vehicles through its company-owned service locations and Tesla mobile service technicians; and vehicle limited warranties and extended service plans. The Energy Generation and Storage segment engages in the design, manufacture, installation, sale, and leasing of solar energy generation and energy storage products, and related services to residential, commercial, and industrial customers and utilities through its website, stores, and galleries, as well as through a network of channel partners; and provision of service and repairs to its energy product customers, including under warranty, as well as various financing options to its solar customers. The company was formerly known as Tesla Motors, Inc. and changed its name to Tesla, Inc. in February 2017. Tesla, Inc. was incorporated in 2003 and is headquartered in Austin, Texas."
+fullTimeEmployees,140473
+companyOfficers,"[{'maxAge': 1, 'name': 'Mr. Elon R. Musk', 'age': 52, 'title': 'Co-Founder, Technoking of Tesla, CEO & Director', 'yearBorn': 1972, 'fiscalYear': 2023, 'exercisedValue': 0, 'unexercisedValue': 0}, {'maxAge': 1, 'name': 'Mr. Vaibhav  Taneja', 'age': 46, 'title': 'Chief Financial Officer', 'yearBorn': 1978, 'fiscalYear': 2023, 'totalPay': 278000, 'exercisedValue': 8517957, 'unexercisedValue': 202075632}, {'maxAge': 1, 'name': 'Mr. Xiaotong  Zhu', 'age': 44, 'title': 'Senior Vice President of Automotive', 'yearBorn': 1980, 'fiscalYear': 2023, 'totalPay': 926877, 'exercisedValue': 0, 'unexercisedValue': 344144320}, {'maxAge': 1, 'name': 'Travis  Axelrod', 'title': 'Head of Investor Relations', 'fiscalYear': 2023, 'exercisedValue': 0, 'unexercisedValue': 0}, {'maxAge': 1, 'name': 'Brian  Scelfo', 'title': 'Senior Director of Corporate Development', 'fiscalYear': 2023, 'exercisedValue': 0, 'unexercisedValue': 0}, {'maxAge': 1, 'name': 'Mr. Franz  von Holzhausen', 'title': 'Chief Designer', 'fiscalYear': 2023, 'exercisedValue': 0, 'unexercisedValue': 0}, {'maxAge': 1, 'name': 'Mr. John  Walker', 'age': 61, 'title': 'Vice President of Sales - North America', 'yearBorn': 1963, 'fiscalYear': 2023, 'totalPay': 121550, 'exercisedValue': 0, 'unexercisedValue': 0}, {'maxAge': 1, 'name': 'Mr. Peter  Bannon', 'title': 'Chip Architect', 'fiscalYear': 2023, 'exercisedValue': 0, 'unexercisedValue': 0}, {'maxAge': 1, 'name': 'Mr. Turner  Caldwell', 'title': 'Engineering Manager', 'fiscalYear': 2023, 'exercisedValue': 0, 'unexercisedValue': 0}, {'maxAge': 1, 'name': 'Mr. Rodney D. Westmoreland Jr.', 'title': 'Director of Construction Management', 'fiscalYear': 2023, 'exercisedValue': 0, 'unexercisedValue': 0}]"
+auditRisk,5
+boardRisk,9
+compensationRisk,10
+shareHolderRightsRisk,9
+overallRisk,10
+governanceEpochDate,1735689600
+compensationAsOfEpochDate,1703980800
+maxAge,86400
+priceHint,2
+previousClose,413.82
+open,421.72
+dayLow,419.7701
+dayHigh,439.74
+regularMarketPreviousClose,413.82
+regularMarketOpen,421.72
+regularMarketDayLow,419.7701
+regularMarketDayHigh,439.74
+beta,2.295
+trailingPE,116.21253
+forwardPE,130.76765
+volume,93672601
+regularMarketVolume,93672601
+averageVolume,94093459
+averageVolume10days,78832580
+averageDailyVolume10Day,78832580
+bid,425.87
+ask,427.3
+bidSize,200
+askSize,100
+marketCap,1369090555904
+fiftyTwoWeekLow,138.8
+fiftyTwoWeekHigh,488.54
+priceToSalesTrailing12Months,14.092543
+fiftyDayAverage,381.2156
+twoHundredDayAverage,251.5414
+currency,USD
+enterpriseValue,1349004427264
+profitMargins,0.13075
+floatShares,2793105010
+sharesOutstanding,3210060032
+sharesShort,67379077
+sharesShortPriorMonth,77192871
+sharesShortPreviousMonthDate,1732838400
+dateShortInterest,1735603200
+sharesPercentSharesOut,0.021
+heldPercentInsiders,0.12903
+heldPercentInstitutions,0.48031
+shortRatio,0.74
+shortPercentOfFloat,0.0241
+impliedSharesOutstanding,3210060032
+bookValue,21.806
+priceToBook,19.558838
+lastFiscalYearEnd,1703980800
+nextFiscalYearEnd,1735603200
+mostRecentQuarter,1727654400
+earningsQuarterlyGrowth,0.169
+netIncomeToCommon,12743000064
+trailingEps,3.67
+forwardEps,3.24
+lastSplitFactor,3:1
+lastSplitDate,1661385600
+enterpriseToRevenue,13.886
+enterpriseToEbitda,101.858
+52WeekChange,1.0426245
+SandP52WeekChange,0.23631513
+exchange,NMS
+quoteType,EQUITY
+symbol,TSLA
+underlyingSymbol,TSLA
+shortName,"Tesla, Inc."
+longName,"Tesla, Inc."
+firstTradeDateEpochUtc,1277818200
+timeZoneFullName,America/New_York
+timeZoneShortName,EST
+uuid,ec367bc4-f92c-397c-ac81-bf7b43cffaf7
+messageBoardId,finmb_27444752
+gmtOffSetMilliseconds,-18000000
+currentPrice,426.5
+targetHighPrice,528.0
+targetLowPrice,125.0
+targetMeanPrice,309.0283
+targetMedianPrice,300.0
+recommendationMean,2.74468
+recommendationKey,hold
+numberOfAnalystOpinions,41
+totalCash,33648001024
+totalCashPerShare,10.482
+ebitda,13244000256
+totalDebt,12782999552
+quickRatio,1.214
+currentRatio,1.844
+totalRevenue,97150001152
+debtToEquity,18.078
+revenuePerShare,30.457
+returnOnAssets,0.04759
+returnOnEquity,0.20389
+grossProfits,17709000704
+freeCashflow,676625024
+operatingCashflow,14478999552
+earningsGrowth,0.17
+revenueGrowth,0.078
+grossMargins,0.18229
+ebitdaMargins,0.13633001
+operatingMargins,0.107889995
+financialCurrency,USD
+trailingPegRatio,5.1022
