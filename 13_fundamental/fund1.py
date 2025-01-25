@@ -15,3 +15,8 @@ print(ticker.quarterly_balance_sheet)
 
 print(ticker.get_cashflow())
 print(ticker.quarterly_cash_flow)
+
+d=ticker.get_news()
+print(d)
+df=pd.DataFrame(d)
+print(df)
