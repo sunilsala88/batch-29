@@ -59,6 +59,11 @@ u=mpf.make_addplot(bands['BBU_20_2.0'],color='g')
 l=mpf.make_addplot(bands['BBL_20_2.0'],color='r')
 m=mpf.make_addplot(bands['BBM_20_2.0'],color='b')
 
-mpf.plot(data,style='yahoo',type='candle',addplot=[u,l,m])
+# mpf.plot(data,style='yahoo',type='candle',addplot=[u,l,m])
 
 #rsi
+
+rsi=ta.rsi(data['Close'],length=14)
+print(rsi)
+
+# mpf.plot(data,style='yahoo',type='candle',addplot=[mpf.make_addplot(rsi,color='orange',panel=1)])
