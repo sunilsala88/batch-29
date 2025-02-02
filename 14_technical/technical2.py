@@ -44,3 +44,21 @@ length=10
 mult=3
 super=ta.supertrend(data['High'],data['Low'],data['Close'],length=length,multiplier=mult)
 print(super)
+
+
+l=mpf.make_addplot(super['SUPERTl_10_3.0'],color='g')
+s=mpf.make_addplot(super['SUPERTs_10_3.0'],color='r')
+
+# mpf.plot(data,style='yahoo',type='candle',addplot=[l,s])
+
+
+bands=ta.bbands(data['Close'],length=20)
+print(bands)
+
+u=mpf.make_addplot(bands['BBU_20_2.0'],color='g')
+l=mpf.make_addplot(bands['BBL_20_2.0'],color='r')
+m=mpf.make_addplot(bands['BBM_20_2.0'],color='b')
+
+mpf.plot(data,style='yahoo',type='candle',addplot=[u,l,m])
+
+#rsi
