@@ -5,6 +5,10 @@ import mplfinance as mpf
 import numpy as np
 
 
+#link to donwload whl file
+# https://github.com/cgohlke/talib-build/releases
+address="/Users/algotrading2024/batch 29/ta_lib-0.6.0-cp312-cp312-win_amd64.whl"
+# pip install "/Users/algotrading2024/batch 29/ta_lib-0.6.0-cp312-cp312-win_amd64.whl"
 
 data=yf.download(tickers='TSLA',period='2y')
 print(data)
@@ -47,9 +51,9 @@ data['star']=b
 d=mpf.make_addplot(data['star'],color='black',type='scatter')
 mpf.plot(data,addplot=d,type='candle',style='yahoo')
 
-# hammer = data.ta.cdl_pattern(name="hammer")
-# print(hammer)
-# print(hammer.info())
+hammer = data.ta.cdl_pattern(name="hammer")
+print(hammer)
+print(hammer.info())
 
 
 # b=[]
