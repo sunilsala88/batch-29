@@ -1,0 +1,2 @@
+api_key='PKCGQ99MC5FQA1P8ZSRE'
+secret_key='rkWLI1F2poiTbuERdzozfOLgVV6mrFKTH27Ugvb1'
