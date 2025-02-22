@@ -15,8 +15,8 @@ async def sample(data):
     print(data)
     print(dt.now(time_zone))
 # symbol=['BTC/USD','ETH/USD']
-symbol='BTC/USD'
+symbol=['BTC/USD','ETH/USD']
 # crypto_data_stream_client.subscribe_trades(crypto_data_stream_handler, *symbol)
 
-crypto_data_stream_client.subscribe_quotes(sample, symbol)
+crypto_data_stream_client.subscribe_quotes(sample, *symbol)
 crypto_data_stream_client.run()
