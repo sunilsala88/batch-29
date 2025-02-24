@@ -80,8 +80,8 @@ def get_all_position():
     pos_df=pd.DataFrame(new_pos)
     # pos_df.to_csv('pos.csv')
     #filter pos that are in list_of_tickers
-    l=[i.replace("/","") for i in list_of_tickers]
-    pos_df=pos_df[pos_df['symbol'].str.replace('/','').isin(l)]
+    # l=[i.replace("/","") for i in list_of_tickers]
+    # pos_df=pos_df[pos_df['symbol'].str.replace('/','').isin(l)]
     return pos_df
 
 pos_df=get_all_position()
