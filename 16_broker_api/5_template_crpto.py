@@ -3,6 +3,7 @@
 import pendulum as dt
 import pandas as pd
 from datetime import datetime,timedelta
+
 import time
 import logging
 import pandas_ta as ta
@@ -26,16 +27,19 @@ logging.basicConfig(level=logging.INFO, filename=f'{strategy_name}_{dt.now(tz=ti
 
 logging.info(f'starting {strategy_name} strategy file')
 
-# setup crypto historical data client
-crypto_historical_data_client = CryptoHistoricalDataClient()
+
 
 def get_historical_crypto_data(ticker,duration,time_frame_unit):
+    # setup crypto historical data client
+    crypto_historical_data_client = CryptoHistoricalDataClient()
     """extracts historical data and outputs in the form of dataframe"""
-    now = datetime.now(ZoneInfo("America/New_York"))
+    # now = datetime.now(ZoneInfo("America/New_York"))
+    now=dt.now(tz=time_zone)
     req = CryptoBarsRequest(
         symbol_or_symbols = ticker,
         timeframe=TimeFrame(amount = 1, unit = time_frame_unit), # specify timeframe
-        start = now - timedelta(days = duration),                          # specify start datetime, default=the beginning of the current day.
+        # start = now - timedelta(days = duration),                          # specify start datetime, default=the beginning of the current day.
+        start=now-dt.duration(days=duration)
         # end_date=None,                                        # specify end datetime, default=now
         # limit = 2,                                               # specify limit
     )
@@ -53,42 +57,42 @@ df=get_historical_crypto_data('AAVE/USD',10,TimeFrameUnit.Minute)
 print(df)
 
 
-def get_all_open_orders():
-    # params to filter orders by
-    request_params = GetOrdersRequest(
-                        status=QueryOrderStatus.OPEN
-                    )
+# def get_all_open_orders():
+#     # params to filter orders by
+#     request_params = GetOrdersRequest(
+#                         status=QueryOrderStatus.OPEN
+#                     )
 
-    # orders that satisfy params
-    orders = trading_client.get_orders(filter=request_params)
-    new_order=[]
-    for elem in orders:
-        new_order.append(dict(elem))
+#     # orders that satisfy params
+#     orders = trading_client.get_orders(filter=request_params)
+#     new_order=[]
+#     for elem in orders:
+#         new_order.append(dict(elem))
 
-    order_df=pd.DataFrame(new_order)
-    return order_df
+#     order_df=pd.DataFrame(new_order)
+#     return order_df
 
-def get_all_position():
+# def get_all_position():
 
-    pos=trading_client.get_all_positions()
+#     pos=trading_client.get_all_positions()
 
 
-    new_pos=[]
-    for elem in pos:
-        new_pos.append(dict(elem))
+#     new_pos=[]
+#     for elem in pos:
+#         new_pos.append(dict(elem))
 
-    pos_df=pd.DataFrame(new_pos)
-    # pos_df.to_csv('pos.csv')
-    #filter pos that are in list_of_tickers
-    # l=[i.replace("/","") for i in list_of_tickers]
-    # pos_df=pos_df[pos_df['symbol'].str.replace('/','').isin(l)]
-    return pos_df
+#     pos_df=pd.DataFrame(new_pos)
+#     # pos_df.to_csv('pos.csv')
+#     #filter pos that are in list_of_tickers
+#     # l=[i.replace("/","") for i in list_of_tickers]
+#     # pos_df=pos_df[pos_df['symbol'].str.replace('/','').isin(l)]
+#     return pos_df
 
-pos_df=get_all_position()
-print(pos_df)
+# pos_df=get_all_position()
+# print(pos_df)
 
-ord_df=get_all_open_orders()
-print(ord_df)
+# ord_df=get_all_open_orders()
+# print(ord_df)
 
 # def close_this_position(ticker_name):
 #     try:
