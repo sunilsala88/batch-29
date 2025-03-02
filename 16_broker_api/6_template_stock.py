@@ -55,6 +55,70 @@ def get_historical_crypto_data(ticker,duration,time_frame_unit):
     sdata['atr']=ta.atr(sdata.high, sdata.low, sdata.close, length=14)
     return sdata
 
-print(dt.now(tz=time_zone))
-df=get_historical_crypto_data('TSLA',10,TimeFrameUnit.Minute)
-print(df)
+# print(dt.now(tz=time_zone))
+# df=get_historical_crypto_data('TSLA',10,TimeFrameUnit.Minute)
+# print(df)
+
+
+def get_all_open_orders():
+    # params to filter orders by
+    request_params = GetOrdersRequest(
+                        status=QueryOrderStatus.OPEN
+                    )
+
+    # orders that satisfy params
+    orders = trading_client.get_orders(filter=request_params)
+    new_order=[]
+    for elem in orders:
+        new_order.append(dict(elem))
+
+    order_df=pd.DataFrame(new_order)
+    order_df.to_csv('orders.csv')
+    l=[i for i in list_of_tickers]
+    order_df=order_df[order_df['symbol'].isin(l)]
+    return order_df
+
+def get_all_position():
+
+    pos=trading_client.get_all_positions()
+    new_pos=[]
+    for elem in pos:
+        new_pos.append(dict(elem))
+
+    pos_df=pd.DataFrame(new_pos)
+    pos_df.to_csv('pos.csv')
+    # filter pos that are in list_of_tickers
+    l=[i.replace("/","") for i in list_of_tickers]
+    pos_df=pos_df[pos_df['symbol'].str.replace('/','').isin(l)]
+    return pos_df
+
+pos_df=get_all_position()
+print(pos_df)
+
+ord_df=get_all_open_orders()
+print(ord_df)
+
+
+
+def close_this_position(ticker_name):
+    ticker_name=ticker_name.replace('/','')
+    print(ticker_name)
+    try:
+        # p = trading_client.get_open_position(ticker_name)
+        # print(p)
+        c=trading_client.close_position(ticker_name)
+        print(c)
+        print('position closed')
+    except:
+        print('position does not exist')
+
+def close_this_order(tickera_name):
+    try:
+        for i in trading_client.get_orders():
+            if i.symbol==tickera_name:
+                id1=i.id
+        trading_client.cancel_order_by_id(id1)
+    except:
+        print('order does not exist')
+
+close_this_position('TSLA')
