@@ -20,7 +20,7 @@ from alpaca.trading.client import TradingClient
 from credentials import api_key,secret_key
 trading_client = TradingClient(api_key, secret_key, paper=True)
 
-list_of_tickers=["BTC/USD","ETH/USD",'AAVE/USD']
+list_of_tickers=["ETH/USD",'AAVE/USD']
 time_zone='America/New_York'
 strategy_name='crypto_sma'
 logging.basicConfig(level=logging.INFO, filename=f'{strategy_name}_{dt.now(tz=time_zone).date()}.log',filemode='a',format="%(asctime)s - %(message)s")
@@ -52,9 +52,9 @@ def get_historical_crypto_data(ticker,duration,time_frame_unit):
     sdata['atr']=ta.atr(sdata.high, sdata.low, sdata.close, length=14)
     return sdata
 
-# print(dt.now(tz=time_zone))
-# df=get_historical_crypto_data('AAVE/USD',10,TimeFrameUnit.Minute)
-# print(df)
+print(dt.now(tz=time_zone))
+df=get_historical_crypto_data('AAVE/USD',10,TimeFrameUnit.Minute)
+print(df)
 
 
 def get_all_open_orders():
@@ -70,9 +70,10 @@ def get_all_open_orders():
         new_order.append(dict(elem))
 
     order_df=pd.DataFrame(new_order)
-    order_df.to_csv('orders.csv')
+    
     l=[i for i in list_of_tickers]
     order_df=order_df[order_df['symbol'].isin(l)]
+    order_df.to_csv('orders1.csv')
     return order_df
 
 def get_all_position():
@@ -83,17 +84,15 @@ def get_all_position():
         new_pos.append(dict(elem))
 
     pos_df=pd.DataFrame(new_pos)
-    pos_df.to_csv('pos.csv')
+    
     # filter pos that are in list_of_tickers
     l=[i.replace("/","") for i in list_of_tickers]
     pos_df=pos_df[pos_df['symbol'].str.replace('/','').isin(l)]
+    pos_df.to_csv('position1.csv')
     return pos_df
 
-pos_df=get_all_position()
-print(pos_df)
-
-ord_df=get_all_open_orders()
-print(ord_df)
+print(get_all_open_orders())
+print(get_all_position())
 
 def close_this_position(ticker_name):
     ticker_name=ticker_name.replace('/','')
@@ -112,20 +111,24 @@ def close_this_order(tickera_name):
         for i in trading_client.get_orders():
             if i.symbol==tickera_name:
                 id1=i.id
-        trading_client.cancel_order_by_id(id1)
+                trading_client.cancel_order_by_id(id1)
+                print('closed order for ',tickera_name)
     except:
         print('order does not exist')
 
-close_this_position('AAVE/USD')
 
-# def close_all_position():
-#     #close everything
-#     trading_client.close_all_positions()
 
-# def close_all_orders():
-#     #close all open orders
-#     trading_client.cancel_orders()
+def close_all_position():
+    #close everything
+    for ticker1 in list_of_tickers:
+        close_this_position(ticker1)
+        print('position closed for ',ticker1)
 
+def close_all_orders():
+    #close all open orders
+    for ticker1 in list_of_tickers:
+        close_this_order(ticker1)
+        print('order closed for ',ticker1)
 
 # def trade_buy_stocks(ticker,closing_price):
 #     print('placing market order')
@@ -160,84 +163,85 @@ close_this_position('AAVE/USD')
 #     else:
 #         print('we dont have enough money to trade')
 
-# def main_strategy_code():
-#     print('we are running strategy ')
-#     ord_df=get_all_open_orders()
-#     pos_df=get_all_position()
-#     print(ord_df)
-#     print(pos_df)
+def main_strategy_code():
+    print('we are running strategy ')
+    ord_df=get_all_open_orders()
+    pos_df=get_all_position()
+    print(ord_df)
+    print(pos_df)
 
-#     for ticker in tickers:
-#         print(ticker)
-#         #fetch historical data and indicators
-#         hist_df=get_historical_crypto_data(ticker,1,3)
-#         print(hist_df)
+    for ticker in list_of_tickers:
+        print(ticker)
+        #fetch historical data and indicators
+        hist_df=get_historical_crypto_data(ticker,2,TimeFrameUnit.Minute)
+        print(hist_df)
 
-#         money=float(trading_client.get_account().cash)
-#         money=money/3
-#         print(money)
-#         ltp=hist_df['close'].iloc[-1]
-#         print(ltp)
-#         quantity=money//ltp
-#         print(quantity)
+        money=float(trading_client.get_account().cash)
+        money=money/3
+        print(money)
+        ltp=hist_df['close'].iloc[-1]
+        print(ltp)
+        quantity=money//ltp
+        print(quantity)
 
-#         if quantity==0:
-#             continue
+        # if quantity==0:
+        #     continue
         
-#         if pos_df.empty:
-#             print('we dont have any position')
-#             strategy(hist_df,ticker)
+        # if pos_df.empty:
+        #     print('we dont have any position')
+        #     strategy(hist_df,ticker)
 
-#         elif len(pos_df)!=0 and ticker.replace('/','') not in pos_df['symbol'].to_list():
-#             print('we have some position but ticker is not in pos')
-#             strategy(hist_df,ticker)
+        # elif len(pos_df)!=0 and ticker.replace('/','') not in pos_df['symbol'].to_list():
+        #     print('we have some position but ticker is not in pos')
+        #     strategy(hist_df,ticker)
 
-#         elif len(pos_df)!=0 and ticker.replace('/','')  in pos_df['symbol'].to_list():
-#             print('we have some pos and ticker is in pos')
-#             curr_quant=float(pos_df[pos_df['symbol']==ticker.replace('/','')]['qty'].iloc[-1])
-#             print(curr_quant)
+        # elif len(pos_df)!=0 and ticker.replace('/','')  in pos_df['symbol'].to_list():
+        #     print('we have some pos and ticker is in pos')
+        #     curr_quant=float(pos_df[pos_df['symbol']==ticker.replace('/','')]['qty'].iloc[-1])
+        #     print(curr_quant)
 
-#             if curr_quant==0:
-#                 print('my quantity is 0')
-#                 strategy(hist_df,ticker)
-#             elif curr_quant>0:
-#                 print('we are already long')
-#                 sell_condition=(hist_df['sma_20'].iloc[-1]<hist_df['sma_50'].iloc[-1]) and (hist_df['sma_20'].iloc[-2]>hist_df['sma_50'].iloc[-2])
-#                 if sell_condition:
-#                     print('sell condition is satisfied ')
-#                     close_this_position(ticker.replace('/',''))
-#                 else:
-#                     print('sell condition not satisfied')
-
-
-
-
-# current_time=dt.datetime.now()
-# print(current_time)
-
-# start_hour,start_min=18,3
-# end_hour,end_min=19,35
-
-# start_time=dt.datetime(current_time.year,current_time.month,current_time.day,start_hour,start_min)
-# end_time=dt.datetime(current_time.year,current_time.month,current_time.day,end_hour,end_min)
-
-# print(start_time)
-# print(end_time)
-
-# while dt.datetime.now()<start_time:
-#     print(dt.datetime.now())
-#     time.sleep(1)
-# print('we have reached start time')
+        #     if curr_quant==0:
+        #         print('my quantity is 0')
+        #         strategy(hist_df,ticker)
+        #     elif curr_quant>0:
+        #         print('we are already long')
+        #         sell_condition=(hist_df['sma_20'].iloc[-1]<hist_df['sma_50'].iloc[-1]) and (hist_df['sma_20'].iloc[-2]>hist_df['sma_50'].iloc[-2])
+        #         if sell_condition:
+        #             print('sell condition is satisfied ')
+        #             close_this_position(ticker.replace('/',''))
+        #         else:
+        #             print('sell condition not satisfied')
 
 
 
-# while True:
-#     if dt.datetime.now()>end_time:
-#         break
-#     ct=dt.datetime.now()
-#     print(ct)
+
+current_time=dt.now(tz=time_zone)
+print(current_time)
+
+start_hour,start_min=4,36
+end_hour,end_min=4,41
+
+start_time=dt.datetime(current_time.year,current_time.month,current_time.day,start_hour,start_min,tz=time_zone)
+end_time=dt.datetime(current_time.year,current_time.month,current_time.day,end_hour,end_min,tz=time_zone)
+
+print(start_time)
+print(end_time)
+
+#this code will execute before the start time
+while dt.now(tz=time_zone)<start_time:
+    print(dt.now(tz=time_zone))
+    time.sleep(1)
+print('we have reached start time')
+
+
+
+while True:
+    if dt.now(tz=time_zone)>end_time:
+        break
+    ct=dt.now(tz=time_zone)
+    print(ct)
     
-#     if ct.second==1: #and ct.minute in range(0,60,5):#[0,5,10,15..55]
-#         main_strategy_code()
-#     time.sleep(1)
-# print('strategy stopped')
+    if ct.second==2: #and ct.minute in range(0,60,5):#[0,5,10,15..55]
+        main_strategy_code()
+    time.sleep(1)
+print('strategy stopped')
