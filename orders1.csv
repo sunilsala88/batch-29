@@ -1,1 +1,0 @@
-,id,client_order_id,created_at,updated_at,submitted_at,filled_at,expired_at,expires_at,canceled_at,failed_at,replaced_at,replaced_by,replaces,asset_id,symbol,asset_class,notional,qty,filled_qty,filled_avg_price,order_class,order_type,type,side,time_in_force,limit_price,stop_price,status,extended_hours,legs,trail_percent,trail_price,hwm,position_intent,ratio_qty
