@@ -19,14 +19,19 @@ def get_sma(closing_data,length):
 print(get_sma(data['Close'],50))
 
 class SMA_cross(Strategy):
-    n1=50
-    n2=30
+    n1=20
+    n2=50
 
     def init(self):
-        pass
+        self.sma1=self.I(get_sma,self.data.df['Close'],self.n1)
+        self.sma2=self.I(get_sma,self.data.df.Close,self.n2)
 
     def next(self):
-        pass
+        if (self.sma1[-1]>self.sma2[-1]) and (self.sma1[-2]<self.sma2[-1]):
+            self.buy()
+        elif (self.sma1[-1]<self.sma2[-1]) and (self.sma1[-2]>self.sma2[-1]) and self.position.is_long:
+            self.position.close()
+
 
 bt=Backtest(data,SMA_cross,cash=1000)
 output=bt.run()
