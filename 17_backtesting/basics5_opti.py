@@ -48,7 +48,22 @@ print(output)
 # bt.plot()
 
 
-output=bt.optimize(sma_l=[50,55,60,65,70,75,80,85],ema_l=[20,25,30,35,40,45],maximize='Return [%]',method='sambo')
-print(output)
-print(output['_strategy'])
+# output=bt.optimize(sma_l=range(60,120,2),ema_l=range(20,60,2),maximize='Win Rate [%]')
+# print(output)
+# print(output['_strategy'])
+# bt.plot()
+#pip install backtesting==0.6.1
 
+
+
+def custom_optimization(stats):
+    return stats['Win Rate [%]'] * stats['Return [%]']
+
+
+#optimize multiple parameters at once
+# l1=range(50,100,3)
+# l2=range(10,40,3)
+stats=bt.optimize(sma_l=range(60,120,2),ema_l=range(20,60,2),maximize=custom_optimization)
+print(stats)
+print(stats['_strategy'])
+# bt.plot()
