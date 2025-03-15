@@ -2,10 +2,8 @@ from backtesting import Strategy,Backtest
 import yfinance as yf
 import pandas_ta as ta
 
-
-data=yf.download('TSLA',period='5y')
+data=yf.download('BTC-USD',period='5y')
 data.columns=[c[0] for c in data.columns]
-print('downloading data for first time')
 print(data)
 
 def SMA(closing_data,length):
@@ -14,9 +12,9 @@ def SMA(closing_data,length):
 def EMA(closing_data,length):
     return ta.ema(closing_data,length)
 
-# print(SMA(data['Close'],50))
-# print(EMA(data['Close'],20))
-# import time
+print(SMA(data['Close'],50))
+print(EMA(data['Close'],20))
+import time
 
 class sma_ema(Strategy):
     sma_l=50
@@ -34,23 +32,19 @@ class sma_ema(Strategy):
         # print('current sma',self.sma[-1],'cuurent ema',self.ema[-1])
 
         if (self.ema[-1]>self.sma[-1]) and (self.ema[-2]<self.sma[-2]):
+            cp=self.data.df.Close[-1]
             if self.position.is_short:
                 self.position.close()
-            self.buy()
+            self.buy(sl=cp*0.95,tp=cp*1.10)
         elif (self.ema[-1]<self.sma[-1]) and (self.ema[-2]>self.sma[-2]):
+            cp=self.data.df.Close[-1]
             if self.position.is_long:
                 self.position.close()
-            self.sell()
+            self.sell(sl=cp*1.05,tp=cp*0.90)
 
 bt=Backtest(data,sma_ema,cash=120_000,commission=0.002)
 output=bt.run()
 print(output)
-# print(output['_trades'])
-# bt.plot()
+print(output['_trades'])
+bt.plot()
 
-
-output=bt.optimize(sma_l=[50,55,60,65,70,75,80,85],ema_l=[20,25,30,35,40,45],maximize='Return [%]')
-print(output)
-print(output['_strategy'])
-# import sys
-# sys.exit()
