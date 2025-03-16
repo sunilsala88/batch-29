@@ -24,7 +24,7 @@ def ema(close_data,period=9):
 
 
 class supertrend_ema(Strategy):
-    super_length=10
+    super_length=30
     ema_length=10
 
 
