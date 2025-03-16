@@ -1,7 +1,7 @@
 from backtesting import Backtest,Strategy
 import yfinance as yf
 import pandas_ta as ta
-
+from backtesting.lib import resample_apply
 # data=yf.download('^NSEI',period='5y')
 # data=yf.download('^NSEI',period='7d',interval='1m')
 # data.columns=[c[0] for c in data.columns]
@@ -14,7 +14,7 @@ df['timestamp']=pd.to_datetime(df['timestamp'])
 df=df.rename(columns={'timestamp':'Date','open':'Open','high':'High','low':'Low','close':'Close'})
 df=df.set_index('Date')
 data=df.copy()
-# data=data.iloc[:10_000]
+# data=data.iloc[:50_000]
 
 def band_lower(close,l):
     bb=ta.bbands(close,l)
@@ -34,11 +34,15 @@ import time
 
 class bollinger_strategy(Strategy):
     n1=20
+    gran='5min'
 
 
     def init(self):
-        self.upper=self.I(band_upper,self.data.df['Close'],self.n1)
-        self.lower=self.I(band_lower,self.data.df['Close'],self.n1)
+        # self.upper=self.I(band_upper,self.data.df['Close'],self.n1)
+        # self.lower=self.I(band_lower,self.data.df['Close'],self.n1)
+
+        self.upper = resample_apply(self.gran, band_upper,self.data.Close.s,self.n1)
+        self.lower = resample_apply(self.gran, band_lower,self.data.Close.s,self.n1)
 
     def next(self):
 
@@ -61,10 +65,17 @@ output=bt.run()
 print(output)
 # bt.plot()
 
-def custom_optimization(stats):
-    return stats['Win Rate [%]'] * stats['Return [%]']
+# def custom_optimization(stats):
+#     return stats['Win Rate [%]'] * stats['Return [%]']
 
-stats=bt.optimize(n1=range(10,60,3),maximize=custom_optimization)
+# stats=bt.optimize(n1=range(10,60,3),maximize=custom_optimization)
+# print(stats)
+# print(stats['_strategy'])
+# bt.plot()
+
+
+l1=['5min','15min','30min','60min','120min','240min']
+stats=bt.optimize(gran=l1,maximize='Return [%]')
 print(stats)
 print(stats['_strategy'])
-# bt.plot()
+bt.plot()
