@@ -256,7 +256,7 @@ def strategy_condition(hist_df_hourly,hist_df_daily,ticker):
     # print(hist_df)
     print(ticker)
     buy_condition=hist_df_hourly['super'].iloc[-1]>0 and hist_df_daily['ema'].iloc[-1]<hist_df_hourly['close'].iloc[-1]
-    buy_condition=True
+    # buy_condition=False
     sell_condition=hist_df_hourly['super'].iloc[-1]<0 and hist_df_daily['ema'].iloc[-1]>hist_df_hourly['close'].iloc[-1]
     # sell_condition=True
 
@@ -329,7 +329,7 @@ def main_strategy():
 
                         print('we have current ticker in position and is long')
                         sell_condition=hist_df_hourly['super'].iloc[-1]<0 and hist_df_daily['ema'].iloc[-1]>hist_df_hourly['close'].iloc[-1]
-
+                        # sell_condition=True
                         if sell_condition:
                                     hourly_closing_price=hist_df_hourly['close'].iloc[-1]
                                     atr_value=hist_df_daily['atr'].iloc[-1]
