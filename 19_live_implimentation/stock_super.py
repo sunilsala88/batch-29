@@ -6,13 +6,20 @@
 # Go Short:When the daily Supertrend gives a short signal.The closing price is less than the hourly EMA.
 
 
-from credentials import api_key,secret_key
+
 from alpaca.data.historical.stock import StockHistoricalDataClient
 import pendulum as dt
 import pandas as pd
 import pandas_ta as ta
 import time
 import logging
+
+
+
+import requests
+TOKEN = ''
+ids = ''
+
 
 
 from datetime import datetime,timedelta
@@ -36,7 +43,7 @@ list_of_tickers=['TSLA','AMZN','GOOG','NVDA','AAPL','MSFT','NFLX','AMD']
 time_frame=1
 time_frame_unit=TimeFrameUnit.Minute
 days=20
-start_hour,start_min=9,30
+start_hour,start_min=5,44
 end_hour,end_min=15,45
 time_zone='America/New_York'
 strategy_name='supertrend_ema_strategy'
@@ -73,6 +80,9 @@ def get_historical_stock_data(ticker,duration,time_frame_unit):
     sdata['super']=ta.supertrend(sdata.high,sdata.low,sdata.close,length=10)['SUPERTd_10_3.0']
     sdata['atr']=ta.atr(sdata.high, sdata.low, sdata.close, length=14)
     return sdata
+
+df=get_historical_stock_data('TSLA',20,TimeFrameUnit.Minute)
+print(df)
 
 def get_open_position():
 
@@ -148,6 +158,9 @@ def check_market_order_placed(ticker):
 
 def trade_sell_stocks(symbol,stock_price,stop_price,quantity=1):
     logging.info(f'Selling {quantity} of {symbol} at {stock_price}')
+    message=f'Selling {quantity} of {symbol} at {stock_price}'
+    url = f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id={ids}&parse_mode=Markdown&text={message}"
+    print(requests.get(url).json())
     if check_market_order_placed(symbol):
 
         market_order_data = MarketOrderRequest(
@@ -162,6 +175,7 @@ def trade_sell_stocks(symbol,stock_price,stop_price,quantity=1):
                         order_data=market_order_data
                     )
         print(market_order)
+        logging.info(f'sent order to broker Selling {quantity} of {symbol} at {stock_price}')
 
 
 
@@ -169,6 +183,9 @@ def trade_sell_stocks(symbol,stock_price,stop_price,quantity=1):
 
 def trade_buy_stocks(symbol,stock_price,stop_price,quantity=1):
     logging.info(f'Buying {quantity} of {symbol} at {stock_price}')
+    message=f'Buying {quantity} of {symbol} at {stock_price}'
+    url = f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id={ids}&parse_mode=Markdown&text={message}"
+    print(requests.get(url).json())
 
     if check_market_order_placed(symbol):
 
@@ -184,6 +201,8 @@ def trade_buy_stocks(symbol,stock_price,stop_price,quantity=1):
                         order_data=market_order_data
                     )
         print(market_order)
+        logging.info(f'sent order to broker Buying {quantity} of {symbol} at {stock_price}')
+
 
 
 
@@ -237,7 +256,7 @@ def strategy_condition(hist_df_hourly,hist_df_daily,ticker):
     # print(hist_df)
     print(ticker)
     buy_condition=hist_df_hourly['super'].iloc[-1]>0 and hist_df_daily['ema'].iloc[-1]<hist_df_hourly['close'].iloc[-1]
-    # buy_condition=True
+    buy_condition=True
     sell_condition=hist_df_hourly['super'].iloc[-1]<0 and hist_df_daily['ema'].iloc[-1]>hist_df_hourly['close'].iloc[-1]
     # sell_condition=True
 
@@ -255,86 +274,96 @@ def strategy_condition(hist_df_hourly,hist_df_daily,ticker):
         print('no condition satisfied')
 
 def main_strategy():
-    pos_df= get_open_position()
-    ord_df= get_open_orders()
-    print(pos_df)
-    print(ord_df)
-    ord_df.to_csv('orders.csv')
+   
+        pos_df= get_open_position()
+        ord_df= get_open_orders()
+        print(pos_df)
+        print(ord_df)
+        ord_df.to_csv('orders.csv')
 
-    for ticker in list_of_tickers:
-        print(ticker)
-        #historical data with indicator data
-        hist_df=get_historical_stock_data(ticker,days,time_frame_unit)
-        print(hist_df)
-        hist_df_hourly=get_historical_stock_data(ticker,10,TimeFrameUnit.Hour)
-        hist_df_daily=get_historical_stock_data(ticker,50,TimeFrameUnit.Day)
-        print(hist_df_hourly)
-        print(hist_df_daily)
+        for ticker in list_of_tickers:
+            try:
+                print(ticker)
+                #historical data with indicator data
+                hist_df=get_historical_stock_data(ticker,days,time_frame_unit)
+                print(hist_df)
+                hist_df_hourly=get_historical_stock_data(ticker,10,TimeFrameUnit.Hour)
+                hist_df_daily=get_historical_stock_data(ticker,50,TimeFrameUnit.Day)
+                print(hist_df_hourly)
+                print(hist_df_daily)
 
-        #get current money
-        money=trading_client.get_account().cash
-        print(money)
-        money=500
-        closing_price=hist_df['close'].iloc[-1]
-        print(closing_price)
-        quantity=money/closing_price
-        print(quantity)
-
-
-        if quantity<1:
-            continue
-        
+                #get current money
+                money=trading_client.get_account().cash
+                print(money)
+                money=500
+                closing_price=hist_df['close'].iloc[-1]
+                print(closing_price)
+                quantity=money/closing_price
+                print(quantity)
 
 
-        elif (pos_df.empty )  or (len(pos_df)!=0 and ticker not in pos_df['symbol'].to_list()):
-            print('we have some position but ticker is not in pos')
-            strategy_condition(hist_df_hourly,hist_df_daily,ticker)
+                if quantity<1:
+                    continue
+                
 
 
-        
-        elif len(pos_df)!=0 and ticker in pos_df['symbol'].to_list():
-            print('we have some pos and ticker is in pos')
-            curr_quant=float(pos_df[pos_df['symbol']==ticker]['qty'].iloc[-1])
-            print(curr_quant)
-
-            if curr_quant==0:
-                print('my quantity is 0')
-                strategy_condition(hist_df,ticker)
-
-            elif curr_quant>0:
+                elif (pos_df.empty )  or (len(pos_df)!=0 and ticker not in pos_df['symbol'].to_list()):
+                    print('we have some position but ticker is not in pos')
+                    # logging.info('we have some position but ticker is not in pos')
+                    strategy_condition(hist_df_hourly,hist_df_daily,ticker)
 
 
-                print('we have current ticker in position and is long')
-                sell_condition=hist_df_hourly['super'].iloc[-1]<0 and hist_df_daily['ema'].iloc[-1]>hist_df_hourly['close'].iloc[-1]
+                
+                elif len(pos_df)!=0 and ticker in pos_df['symbol'].to_list():
+                    print('we have some pos and ticker is in pos')
+                    # logging.info('we have some pos and ticker is in pos')
+                    curr_quant=float(pos_df[pos_df['symbol']==ticker]['qty'].iloc[-1])
+                    print(curr_quant)
 
-                if sell_condition:
-                            hourly_closing_price=hist_df_hourly['close'].iloc[-1]
-                            atr_value=hist_df_daily['atr'].iloc[-1]
-                            print('sell condition satisfied')
-                            logging.info(f'Sell condition satisfied for {ticker}')
-                            close_this_order_for_stock(ticker)
-                            time.sleep(1)
-                            close_this_stock_position(ticker)
-                            time.sleep(1)
-                            trade_sell_stocks(ticker,hourly_closing_price,hourly_closing_price+atr_value)
+                    if curr_quant==0:
+                        print('my quantity is 0')
+                        strategy_condition(hist_df,ticker)
 
-            elif curr_quant<0:
-                print('we have current ticker in position and is short')
+                    elif curr_quant>0:
 
-                hourly_closing_price=hist_df_hourly['close'].iloc[-1]
-                atr_value=hist_df_daily['atr'].iloc[-1]
-                buy_condition=hist_df_hourly['super'].iloc[-1]>0 and hist_df_daily['ema'].iloc[-1]<hist_df_hourly['close'].iloc[-1]
 
-                if buy_condition:
-                            print('buy condiiton satisfied')
-                            logging.info(f'Buy condition satisfied for {ticker}')
-                            close_this_order_for_stock(ticker)
-                            time.sleep(1)
-                            close_this_stock_position(ticker)    
-                            time.sleep(1)            
-                            trade_buy_stocks(ticker,hourly_closing_price,hourly_closing_price-atr_value)
-    time.sleep(1)
-    check_and_place_stop_order(pos_df,ord_df)
+                        print('we have current ticker in position and is long')
+                        sell_condition=hist_df_hourly['super'].iloc[-1]<0 and hist_df_daily['ema'].iloc[-1]>hist_df_hourly['close'].iloc[-1]
+
+                        if sell_condition:
+                                    hourly_closing_price=hist_df_hourly['close'].iloc[-1]
+                                    atr_value=hist_df_daily['atr'].iloc[-1]
+                                    print('sell condition satisfied')
+                                    logging.info(f'Sell condition satisfied for {ticker}')
+                                    close_this_order_for_stock(ticker)
+                                    time.sleep(1)
+                                    close_this_stock_position(ticker)
+                                    time.sleep(1)
+                                    trade_sell_stocks(ticker,hourly_closing_price,hourly_closing_price+atr_value)
+
+                    elif curr_quant<0:
+                        print('we have current ticker in position and is short')
+
+                        hourly_closing_price=hist_df_hourly['close'].iloc[-1]
+                        atr_value=hist_df_daily['atr'].iloc[-1]
+                        buy_condition=hist_df_hourly['super'].iloc[-1]>0 and hist_df_daily['ema'].iloc[-1]<hist_df_hourly['close'].iloc[-1]
+
+                        if buy_condition:
+                                    print('buy condiiton satisfied')
+                                    logging.info(f'Buy condition satisfied for {ticker}')
+                                    close_this_order_for_stock(ticker)
+                                    time.sleep(1)
+                                    close_this_stock_position(ticker)    
+                                    time.sleep(1)            
+                                    trade_buy_stocks(ticker,hourly_closing_price,hourly_closing_price-atr_value)
+            except Exception as e:
+                logging.info(e)
+                message=e
+                url = f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id={ids}&parse_mode=Markdown&text={message}"
+                print(requests.get(url).json())
+                
+        time.sleep(1)
+        check_and_place_stop_order(pos_df,ord_df)
 
 
 
@@ -354,7 +383,7 @@ while dt.now(time_zone)<start_time :
 
 print('we have reached start time ')
 print('we are running our strategy now')
-
+logging.info('starting strategy')
 
 while True:
     if dt.now(time_zone)>end_time:
@@ -369,18 +398,18 @@ while True:
 
 
 
-print('we have reached end time')
+# print('we have reached end time')
 
 
-#close all orders
-for ticker in list_of_tickers:
-    close_this_order_for_stock(ticker)
-    print('order closed')
+# #close all orders
+# for ticker in list_of_tickers:
+#     close_this_order_for_stock(ticker)
+#     print('order closed')
 
-#close all positions
-for ticker in list_of_tickers:
-    close_this_stock_position(ticker)
-    print('position closed')
+# #close all positions
+# for ticker in list_of_tickers:
+#     close_this_stock_position(ticker)
+#     print('position closed')
 
 
-print('strategy stopped')
+# print('strategy stopped')
