@@ -1,0 +1,2018 @@
+ this is my first line
+ taking positions at 10:15
+ selling atm call and put option 
+ 460.6,184.5,{'atm_call': '460.6', 'atm_put': '184.5'},2644
+ buying atm call option 
+ 488.25,{'atm_put': '184.5'},2156
+ selling atm call option 
+ 489.95,{'atm_put': '184.5', 'atm_call': '489.95'},2645
+ closing positions at 15:25
+ buying atm call option 
+ 427.25,{'atm_put': '184.5'},2218
+ buying atm put option 
+ 165.15,{},2053
+ taking positions at 10:15
+ selling atm call and put option 
+ 459.5,121.95,{'atm_call': '459.5', 'atm_put': '121.95'},2633
+ buying atm call option 
+ 449.6,{'atm_put': '121.95'},2184
+ selling atm call option 
+ 437.5,{'atm_put': '121.95', 'atm_call': '437.5'},2621
+ buying atm call option 
+ 449.05,{'atm_put': '121.95'},2172
+ selling atm call option 
+ 404.25,{'atm_put': '121.95', 'atm_call': '404.25'},2576
+ buying atm call option 
+ 471.05,{'atm_put': '121.95'},2105
+ selling atm call option 
+ 430.9,{'atm_put': '121.95', 'atm_call': '430.9'},2535
+ buying atm call option 
+ 451.85,{'atm_put': '121.95'},2084
+ closing positions at 15:25
+ buying atm put option 
+ 85,{},1999
+ taking positions at 10:15
+ selling atm call and put option 
+ 136.55,298.2,{'atm_call': '136.55', 'atm_put': '298.2'},2433
+ buying atm put option 
+ 351.9,{'atm_call': '136.55'},2082
+ closing positions at 15:25
+ buying atm call option 
+ 58.7,{},2024
+ taking positions at 10:15
+ selling atm call and put option 
+ 355,422,{'atm_call': '355', 'atm_put': '422'},2801
+ buying atm put option 
+ 517.2,{'atm_call': '355'},2284
+ closing positions at 15:25
+ buying atm call option 
+ 186.65,{},2098
+ taking positions at 10:15
+ selling atm call and put option 
+ 237.05,487.4,{'atm_call': '237.05', 'atm_put': '487.4'},2822
+ buying atm put option 
+ 466.3,{'atm_call': '237.05'},2356
+ selling atm put option 
+ 465.1,{'atm_call': '237.05', 'atm_put': '465.1'},2821
+ buying atm put option 
+ 491.95,{'atm_call': '237.05'},2330
+ selling atm put option 
+ 437.85,{'atm_call': '237.05', 'atm_put': '437.85'},2767
+ buying atm put option 
+ 452.9,{'atm_call': '237.05'},2315
+ selling atm put option 
+ 457.4,{'atm_call': '237.05', 'atm_put': '457.4'},2772
+ buying atm put option 
+ 460.65,{'atm_call': '237.05'},2312
+ selling atm put option 
+ 452.8,{'atm_call': '237.05', 'atm_put': '452.8'},2764
+ buying atm put option 
+ 456,{'atm_call': '237.05'},2308
+ selling atm put option 
+ 442.3,{'atm_call': '237.05', 'atm_put': '442.3'},2750
+ buying atm put option 
+ 476.9,{'atm_call': '237.05'},2274
+ closing positions at 15:25
+ buying atm call option 
+ 171.3,{},2103
+ taking positions at 10:15
+ selling atm call and put option 
+ 375.9,211.55,{'atm_call': '375.9', 'atm_put': '211.55'},2689
+ buying atm call option 
+ 381.3,{'atm_put': '211.55'},2308
+ selling atm call option 
+ 389.3,{'atm_put': '211.55', 'atm_call': '389.3'},2697
+ buying atm call option 
+ 382.9,{'atm_put': '211.55'},2315
+ selling atm call option 
+ 397.85,{'atm_put': '211.55', 'atm_call': '397.85'},2712
+ buying atm call option 
+ 397.1,{'atm_put': '211.55'},2315
+ selling atm call option 
+ 380.95,{'atm_put': '211.55', 'atm_call': '380.95'},2695
+ buying atm call option 
+ 389.25,{'atm_put': '211.55'},2306
+ selling atm call option 
+ 422.4,{'atm_put': '211.55', 'atm_call': '422.4'},2728
+ buying atm call option 
+ 449,{'atm_put': '211.55'},2279
+ selling atm call option 
+ 320.05,{'atm_put': '211.55', 'atm_call': '320.05'},2599
+ buying atm call option 
+ 374.45,{'atm_put': '211.55'},2225
+ closing positions at 15:25
+ buying atm put option 
+ 158.15,{},2067
+ taking positions at 10:15
+ selling atm call and put option 
+ 118.8,453.1,{'atm_call': '118.8', 'atm_put': '453.1'},2638
+ buying atm put option 
+ 532.65,{'atm_call': '118.8'},2106
+ selling atm put option 
+ 508,{'atm_call': '118.8', 'atm_put': '508'},2614
+ buying atm put option 
+ 566.15,{'atm_call': '118.8'},2048
+ closing positions at 15:25
+ buying atm call option 
+ 77.95,{},1971
+ taking positions at 10:15
+ selling atm call and put option 
+ 408.7,112.25,{'atm_call': '408.7', 'atm_put': '112.25'},2491
+ buying atm call option 
+ 399.75,{'atm_put': '112.25'},2092
+ selling atm call option 
+ 359,{'atm_put': '112.25', 'atm_call': '359'},2451
+ buying atm call option 
+ 376.95,{'atm_put': '112.25'},2075
+ selling atm call option 
+ 367.85,{'atm_put': '112.25', 'atm_call': '367.85'},2442
+ buying atm call option 
+ 380.3,{'atm_put': '112.25'},2062
+ selling atm call option 
+ 332.55,{'atm_put': '112.25', 'atm_call': '332.55'},2394
+ buying atm call option 
+ 355.65,{'atm_put': '112.25'},2039
+ selling atm call option 
+ 360.15,{'atm_put': '112.25', 'atm_call': '360.15'},2399
+ buying atm call option 
+ 350.6,{'atm_put': '112.25'},2049
+ selling atm call option 
+ 342.05,{'atm_put': '112.25', 'atm_call': '342.05'},2391
+ buying atm call option 
+ 340,{'atm_put': '112.25'},2051
+ selling atm call option 
+ 407.75,{'atm_put': '112.25', 'atm_call': '407.75'},2458
+ buying atm call option 
+ 326.6,{'atm_put': '112.25'},2132
+ selling atm call option 
+ 347.8,{'atm_put': '112.25', 'atm_call': '347.8'},2479
+ buying atm call option 
+ 350.2,{'atm_put': '112.25'},2129
+ closing positions at 15:25
+ buying atm put option 
+ 77.45,{},2052
+ taking positions at 10:15
+ selling atm call and put option 
+ 411.8,408.3,{'atm_call': '411.8', 'atm_put': '408.3'},2871
+ buying atm put option 
+ 464,{'atm_call': '411.8'},2407
+ selling atm put option 
+ 380.3,{'atm_call': '411.8', 'atm_put': '380.3'},2787
+ closing positions at 15:25
+ buying atm call option 
+ 336.6,{'atm_put': '380.3'},2451
+ buying atm put option 
+ 420.75,{},2031
+ taking positions at 10:15
+ selling atm call and put option 
+ 314,414.85,{'atm_call': '314', 'atm_put': '414.85'},2759
+ buying atm call option 
+ 425.2,{'atm_put': '414.85'},2334
+ closing positions at 15:25
+ buying atm put option 
+ 201,{},2133
+ taking positions at 10:15
+ selling atm call and put option 
+ 276.45,295.5,{'atm_call': '276.45', 'atm_put': '295.5'},2704
+ buying atm put option 
+ 389.8,{'atm_call': '276.45'},2315
+ closing positions at 15:25
+ buying atm call option 
+ 134.55,{},2181
+ taking positions at 10:15
+ selling atm call and put option 
+ 357,183.05,{'atm_call': '357', 'atm_put': '183.05'},2721
+ buying atm put option 
+ 344.7,{'atm_call': '357'},2377
+ selling atm put option 
+ 289.9,{'atm_call': '357', 'atm_put': '289.9'},2666
+ closing positions at 15:25
+ buying atm call option 
+ 273.15,{'atm_put': '289.9'},2393
+ buying atm put option 
+ 167.95,{},2226
+ taking positions at 10:15
+ selling atm call and put option 
+ 364,110.4,{'atm_call': '364', 'atm_put': '110.4'},2700
+ buying atm call option 
+ 375.3,{'atm_put': '110.4'},2325
+ selling atm call option 
+ 377.25,{'atm_put': '110.4', 'atm_call': '377.25'},2702
+ buying atm call option 
+ 406.35,{'atm_put': '110.4'},2296
+ selling atm call option 
+ 384,{'atm_put': '110.4', 'atm_call': '384'},2680
+ buying atm call option 
+ 389,{'atm_put': '110.4'},2291
+ selling atm call option 
+ 340.5,{'atm_put': '110.4', 'atm_call': '340.5'},2631
+ buying atm call option 
+ 380,{'atm_put': '110.4'},2251
+ selling atm call option 
+ 369,{'atm_put': '110.4', 'atm_call': '369'},2620
+ buying atm call option 
+ 352.75,{'atm_put': '110.4'},2268
+ selling atm call option 
+ 355.65,{'atm_put': '110.4', 'atm_call': '355.65'},2623
+ buying atm call option 
+ 343.1,{'atm_put': '110.4'},2280
+ selling atm call option 
+ 325.6,{'atm_put': '110.4', 'atm_call': '325.6'},2605
+ closing positions at 15:25
+ buying atm call option 
+ 337.15,{'atm_put': '110.4'},2268
+ buying atm put option 
+ 73,{},2195
+ taking positions at 10:15
+ selling atm call and put option 
+ 354.05,362.65,{'atm_call': '354.05', 'atm_put': '362.65'},2911
+ buying atm put option 
+ 369.2,{'atm_call': '354.05'},2542
+ selling atm put option 
+ 376.95,{'atm_call': '354.05', 'atm_put': '376.95'},2918
+ buying atm put option 
+ 363.6,{'atm_call': '354.05'},2555
+ selling atm put option 
+ 367.85,{'atm_call': '354.05', 'atm_put': '367.85'},2922
+ buying atm put option 
+ 355.05,{'atm_call': '354.05'},2567
+ selling atm put option 
+ 358.1,{'atm_call': '354.05', 'atm_put': '358.1'},2925
+ buying atm put option 
+ 351.55,{'atm_call': '354.05'},2574
+ selling atm put option 
+ 346.7,{'atm_call': '354.05', 'atm_put': '346.7'},2920
+ buying atm put option 
+ 346.95,{'atm_call': '354.05'},2574
+ selling atm put option 
+ 347.85,{'atm_call': '354.05', 'atm_put': '347.85'},2921
+ buying atm put option 
+ 367.6,{'atm_call': '354.05'},2554
+ selling atm put option 
+ 340,{'atm_call': '354.05', 'atm_put': '340'},2894
+ closing positions at 15:25
+ buying atm call option 
+ 280.75,{'atm_put': '340'},2614
+ buying atm put option 
+ 340.25,{},2274
+ taking positions at 10:15
+ selling atm call and put option 
+ 381,228.05,{'atm_call': '381', 'atm_put': '228.05'},2883
+ buying atm call option 
+ 385.8,{'atm_put': '228.05'},2498
+ selling atm call option 
+ 382.75,{'atm_put': '228.05', 'atm_call': '382.75'},2880
+ closing positions at 15:25
+ buying atm call option 
+ 289.4,{'atm_put': '228.05'},2591
+ buying atm put option 
+ 252.5,{},2339
+ taking positions at 10:15
+ selling atm call and put option 
+ 300.4,166.15,{'atm_call': '300.4', 'atm_put': '166.15'},2805
+ buying atm put option 
+ 216.95,{'atm_call': '300.4'},2589
+ selling atm put option 
+ 188.45,{'atm_call': '300.4', 'atm_put': '188.45'},2777
+ closing positions at 15:25
+ buying atm call option 
+ 228.15,{'atm_put': '188.45'},2549
+ buying atm put option 
+ 179.7,{},2370
+ taking positions at 10:15
+ selling atm call and put option 
+ 168.75,161.75,{'atm_call': '168.75', 'atm_put': '161.75'},2699
+ buying atm put option 
+ 156.05,{'atm_call': '168.75'},2543
+ selling atm put option 
+ 157.9,{'atm_call': '168.75', 'atm_put': '157.9'},2700
+ buying atm put option 
+ 160.7,{'atm_call': '168.75'},2540
+ selling atm put option 
+ 148.25,{'atm_call': '168.75', 'atm_put': '148.25'},2688
+ buying atm put option 
+ 162.6,{'atm_call': '168.75'},2526
+ selling atm put option 
+ 154.3,{'atm_call': '168.75', 'atm_put': '154.3'},2680
+ buying atm put option 
+ 171.55,{'atm_call': '168.75'},2509
+ closing positions at 15:25
+ buying atm call option 
+ 79.1,{},2430
+ eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeecall4270020230202,2023-01-25 09:15:00,20230202
+ eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeecall4270020230202,2023-01-25 09:15:00,20230202
+ taking positions at 10:15
+ selling atm call and put option 
+ 357.4,852.55,{'atm_call': '357.4', 'atm_put': '852.55'},3639
+ buying atm put option 
+ 869.5,{'atm_call': '357.4'},2770
+ selling atm put option 
+ 813.95,{'atm_call': '357.4', 'atm_put': '813.95'},3583
+ buying atm put option 
+ 815.65,{'atm_call': '357.4'},2768
+ selling atm put option 
+ 725.2,{'atm_call': '357.4', 'atm_put': '725.2'},3493
+ buying atm put option 
+ 803.8,{'atm_call': '357.4'},2690
+ closing positions at 15:25
+ buying atm call option 
+ 250.2,{},2440
+ taking positions at 10:15
+ selling atm call and put option 
+ 1007.5,338.05,{'atm_call': '1007.5', 'atm_put': '338.05'},3785
+ buying atm put option 
+ 684.2,{'atm_call': '1007.5'},3101
+ selling atm put option 
+ 521.5,{'atm_call': '1007.5', 'atm_put': '521.5'},3622
+ closing positions at 15:25
+ buying atm call option 
+ 1005.2,{'atm_put': '521.5'},2617
+ buying atm put option 
+ 266,{},2351
+ taking positions at 10:15
+ selling atm call and put option 
+ 492.65,597.15,{'atm_call': '492.65', 'atm_put': '597.15'},3440
+ buying atm call option 
+ 645,{'atm_put': '597.15'},2795
+ selling atm call option 
+ 581.15,{'atm_put': '597.15', 'atm_call': '581.15'},3376
+ buying atm call option 
+ 614.7,{'atm_put': '597.15'},2762
+ selling atm call option 
+ 596.6,{'atm_put': '597.15', 'atm_call': '596.6'},3358
+ buying atm call option 
+ 595.2,{'atm_put': '597.15'},2763
+ selling atm call option 
+ 537,{'atm_put': '597.15', 'atm_call': '537'},3300
+ buying atm call option 
+ 634.75,{'atm_put': '597.15'},2666
+ selling atm call option 
+ 627.25,{'atm_put': '597.15', 'atm_call': '627.25'},3293
+ buying atm call option 
+ 691,{'atm_put': '597.15'},2602
+ closing positions at 15:25
+ buying atm put option 
+ 334.35,{},2268
+ taking positions at 10:15
+ selling atm call and put option 
+ 445.55,360.9,{'atm_call': '445.55', 'atm_put': '360.9'},3073
+ buying atm call option 
+ 492.8,{'atm_put': '360.9'},2581
+ selling atm call option 
+ 447.55,{'atm_put': '360.9', 'atm_call': '447.55'},3028
+ buying atm call option 
+ 471.6,{'atm_put': '360.9'},2557
+ selling atm call option 
+ 240.25,{'atm_put': '360.9', 'atm_call': '240.25'},2797
+ buying atm call option 
+ 273.55,{'atm_put': '360.9'},2524
+ selling atm call option 
+ 208.45,{'atm_put': '360.9', 'atm_call': '208.45'},2732
+ buying atm put option 
+ 445.05,{'atm_call': '208.45'},2287
+ closing positions at 15:25
+ buying atm call option 
+ 102.45,{},2185
+ taking positions at 10:15
+ selling atm call and put option 
+ 984.4,420.3,{'atm_call': '984.4', 'atm_put': '420.3'},3589
+ buying atm call option 
+ 1118.6,{'atm_put': '420.3'},2471
+ selling atm call option 
+ 1175.45,{'atm_put': '420.3', 'atm_call': '1175.45'},3646
+ buying atm call option 
+ 1078.35,{'atm_put': '420.3'},2568
+ selling atm call option 
+ 1104.35,{'atm_put': '420.3', 'atm_call': '1104.35'},3672
+ buying atm call option 
+ 1081.3,{'atm_put': '420.3'},2591
+ selling atm call option 
+ 1128.85,{'atm_put': '420.3', 'atm_call': '1128.85'},3719
+ closing positions at 15:25
+ buying atm call option 
+ 1136.95,{'atm_put': '420.3'},2583
+ buying atm put option 
+ 212.4,{},2371
+ taking positions at 10:15
+ selling atm call and put option 
+ 536.45,360.65,{'atm_call': '536.45', 'atm_put': '360.65'},3267
+ buying atm put option 
+ 515.05,{'atm_call': '536.45'},2752
+ selling atm put option 
+ 429.5,{'atm_call': '536.45', 'atm_put': '429.5'},3181
+ buying atm put option 
+ 500.2,{'atm_call': '536.45'},2681
+ selling atm put option 
+ 444.9,{'atm_call': '536.45', 'atm_put': '444.9'},3125
+ buying atm put option 
+ 460.5,{'atm_call': '536.45'},2665
+ selling atm put option 
+ 459,{'atm_call': '536.45', 'atm_put': '459'},3124
+ buying atm put option 
+ 467.5,{'atm_call': '536.45'},2657
+ selling atm put option 
+ 408.55,{'atm_call': '536.45', 'atm_put': '408.55'},3065
+ buying atm call option 
+ 661.5,{'atm_put': '408.55'},2404
+ closing positions at 15:25
+ buying atm put option 
+ 228.9,{},2176
+ taking positions at 10:15
+ selling atm call and put option 
+ 430.3,315.85,{'atm_call': '430.3', 'atm_put': '315.85'},2921
+ buying atm put option 
+ 439.5,{'atm_call': '430.3'},2482
+ selling atm put option 
+ 432.7,{'atm_call': '430.3', 'atm_put': '432.7'},2914
+ buying atm put option 
+ 440.9,{'atm_call': '430.3'},2474
+ selling atm put option 
+ 375.55,{'atm_call': '430.3', 'atm_put': '375.55'},2849
+ buying atm put option 
+ 435.6,{'atm_call': '430.3'},2414
+ selling atm put option 
+ 375.2,{'atm_call': '430.3', 'atm_put': '375.2'},2789
+ buying atm put option 
+ 402.75,{'atm_call': '430.3'},2387
+ selling atm put option 
+ 408.65,{'atm_call': '430.3', 'atm_put': '408.65'},2795
+ buying atm put option 
+ 425.6,{'atm_call': '430.3'},2370
+ selling atm put option 
+ 412,{'atm_call': '430.3', 'atm_put': '412'},2782
+ buying atm put option 
+ 404.6,{'atm_call': '430.3'},2378
+ selling atm put option 
+ 388.55,{'atm_call': '430.3', 'atm_put': '388.55'},2766
+ buying atm put option 
+ 426.7,{'atm_call': '430.3'},2340
+ selling atm put option 
+ 393.75,{'atm_call': '430.3', 'atm_put': '393.75'},2733
+ buying atm put option 
+ 412.45,{'atm_call': '430.3'},2321
+ selling atm put option 
+ 416.45,{'atm_call': '430.3', 'atm_put': '416.45'},2737
+ buying atm put option 
+ 388.9,{'atm_call': '430.3'},2349
+ selling atm put option 
+ 414.65,{'atm_call': '430.3', 'atm_put': '414.65'},2763
+ buying atm put option 
+ 385.5,{'atm_call': '430.3'},2378
+ closing positions at 15:25
+ buying atm call option 
+ 306.55,{},2072
+ taking positions at 10:15
+ selling atm call and put option 
+ 289.2,337.25,{'atm_call': '289.2', 'atm_put': '337.25'},2698
+ buying atm put option 
+ 339.65,{'atm_call': '289.2'},2359
+ selling atm put option 
+ 335.85,{'atm_call': '289.2', 'atm_put': '335.85'},2694
+ buying atm put option 
+ 371.95,{'atm_call': '289.2'},2323
+ selling atm put option 
+ 335.55,{'atm_call': '289.2', 'atm_put': '335.55'},2658
+ buying atm put option 
+ 330.85,{'atm_call': '289.2'},2328
+ selling atm put option 
+ 350.05,{'atm_call': '289.2', 'atm_put': '350.05'},2678
+ buying atm put option 
+ 359,{'atm_call': '289.2'},2319
+ selling atm put option 
+ 318.25,{'atm_call': '289.2', 'atm_put': '318.25'},2637
+ buying atm call option 
+ 331.65,{'atm_put': '318.25'},2306
+ selling atm call option 
+ 298.05,{'atm_put': '318.25', 'atm_call': '298.05'},2604
+ closing positions at 15:25
+ buying atm call option 
+ 293.85,{'atm_put': '318.25'},2311
+ buying atm put option 
+ 283.15,{},2028
+ taking positions at 10:15
+ selling atm call and put option 
+ 330.3,162.75,{'atm_call': '330.3', 'atm_put': '162.75'},2520
+ buying atm put option 
+ 274.05,{'atm_call': '330.3'},2246
+ selling atm put option 
+ 227.3,{'atm_call': '330.3', 'atm_put': '227.3'},2473
+ buying atm put option 
+ 203,{'atm_call': '330.3'},2270
+ selling atm put option 
+ 183.85,{'atm_call': '330.3', 'atm_put': '183.85'},2453
+ closing positions at 15:25
+ buying atm call option 
+ 226.9,{'atm_put': '183.85'},2227
+ buying atm put option 
+ 162.1,{},2065
+ taking positions at 10:15
+ selling atm call and put option 
+ 315.9,470.55,{'atm_call': '315.9', 'atm_put': '470.55'},2850
+ closing positions at 15:25
+ buying atm call option 
+ 387.7,{'atm_put': '470.55'},2463
+ buying atm put option 
+ 304.6,{},2159
+ taking positions at 10:15
+ selling atm call and put option 
+ 451.2,231.1,{'atm_call': '451.2', 'atm_put': '231.1'},2841
+ closing positions at 15:25
+ buying atm call option 
+ 414.4,{'atm_put': '231.1'},2427
+ buying atm put option 
+ 219.9,{},2208
+ taking positions at 10:15
+ selling atm call and put option 
+ 206,398.8,{'atm_call': '206', 'atm_put': '398.8'},2812
+ buying atm put option 
+ 435.7,{'atm_call': '206'},2377
+ selling atm put option 
+ 394.2,{'atm_call': '206', 'atm_put': '394.2'},2771
+ closing positions at 15:25
+ buying atm call option 
+ 195,{'atm_put': '394.2'},2576
+ buying atm put option 
+ 367.45,{},2209
+ taking positions at 10:15
+ selling atm call and put option 
+ 200.55,289.35,{'atm_call': '200.55', 'atm_put': '289.35'},2698
+ buying atm call option 
+ 255,{'atm_put': '289.35'},2443
+ selling atm call option 
+ 232.95,{'atm_put': '289.35', 'atm_call': '232.95'},2675
+ buying atm call option 
+ 246.85,{'atm_put': '289.35'},2429
+ closing positions at 15:25
+ buying atm put option 
+ 129.3,{},2300
+ taking positions at 10:15
+ selling atm call and put option 
+ 181.05,176.8,{'atm_call': '181.05', 'atm_put': '176.8'},2657
+ buying atm call option 
+ 173.1,{'atm_put': '176.8'},2484
+ selling atm call option 
+ 194.3,{'atm_put': '176.8', 'atm_call': '194.3'},2678
+ buying atm call option 
+ 225.85,{'atm_put': '176.8'},2453
+ closing positions at 15:25
+ buying atm put option 
+ 67.55,{},2386
+ taking positions at 10:15
+ selling atm call and put option 
+ 350.05,318.35,{'atm_call': '350.05', 'atm_put': '318.35'},3054
+ buying atm put option 
+ 342.5,{'atm_call': '350.05'},2712
+ selling atm put option 
+ 324.65,{'atm_call': '350.05', 'atm_put': '324.65'},3036
+ buying atm put option 
+ 328.3,{'atm_call': '350.05'},2708
+ selling atm put option 
+ 331.85,{'atm_call': '350.05', 'atm_put': '331.85'},3039
+ buying atm put option 
+ 348.75,{'atm_call': '350.05'},2691
+ selling atm put option 
+ 334.95,{'atm_call': '350.05', 'atm_put': '334.95'},3025
+ buying atm put option 
+ 332.5,{'atm_call': '350.05'},2693
+ selling atm put option 
+ 318.05,{'atm_call': '350.05', 'atm_put': '318.05'},3011
+ buying atm put option 
+ 320.35,{'atm_call': '350.05'},2691
+ selling atm put option 
+ 330.85,{'atm_call': '350.05', 'atm_put': '330.85'},3021
+ buying atm put option 
+ 336.5,{'atm_call': '350.05'},2685
+ closing positions at 15:25
+ buying atm call option 
+ 233.7,{},2452
+ taking positions at 10:15
+ selling atm call and put option 
+ 266.1,339.25,{'atm_call': '266.1', 'atm_put': '339.25'},3057
+ buying atm put option 
+ 339.05,{'atm_call': '266.1'},2718
+ selling atm put option 
+ 329.2,{'atm_call': '266.1', 'atm_put': '329.2'},3047
+ buying atm put option 
+ 342.65,{'atm_call': '266.1'},2705
+ selling atm put option 
+ 334.85,{'atm_call': '266.1', 'atm_put': '334.85'},3039
+ buying atm put option 
+ 366.3,{'atm_call': '266.1'},2673
+ closing positions at 15:25
+ buying atm call option 
+ 193.65,{},2480
+ taking positions at 10:15
+ selling atm call and put option 
+ 269.95,264.7,{'atm_call': '269.95', 'atm_put': '264.7'},3013
+ buying atm put option 
+ 361.1,{'atm_call': '269.95'},2652
+ closing positions at 15:25
+ buying atm call option 
+ 131,{},2521
+ taking positions at 10:15
+ selling atm call and put option 
+ 322.3,187.3,{'atm_call': '322.3', 'atm_put': '187.3'},3030
+ buying atm call option 
+ 346.45,{'atm_put': '187.3'},2684
+ selling atm call option 
+ 274.25,{'atm_put': '187.3', 'atm_call': '274.25'},2958
+ closing positions at 15:25
+ buying atm call option 
+ 220.95,{'atm_put': '187.3'},2738
+ buying atm put option 
+ 195.85,{},2543
+ taking positions at 10:15
+ selling atm call and put option 
+ 179.5,194.8,{'atm_call': '179.5', 'atm_put': '194.8'},2916
+ buying atm put option 
+ 211.15,{'atm_call': '179.5'},2705
+ selling atm put option 
+ 205.9,{'atm_call': '179.5', 'atm_put': '205.9'},2910
+ buying atm put option 
+ 227.05,{'atm_call': '179.5'},2683
+ closing positions at 15:25
+ buying atm call option 
+ 42.05,{},2641
+ taking positions at 10:15
+ selling atm call and put option 
+ 530,304.7,{'atm_call': '530', 'atm_put': '304.7'},3475
+ closing positions at 15:25
+ buying atm call option 
+ 499,{'atm_put': '304.7'},2976
+ buying atm put option 
+ 244,{},2732
+ taking positions at 10:15
+ selling atm call and put option 
+ 530,304.7,{'atm_call': '530', 'atm_put': '304.7'},3566
+ closing positions at 15:25
+ buying atm call option 
+ 499,{'atm_put': '304.7'},3067
+ buying atm put option 
+ 244,{},2823
+ taking positions at 10:15
+ selling atm call and put option 
+ 303.2,350.4,{'atm_call': '303.2', 'atm_put': '350.4'},3476
+ buying atm put option 
+ 408.95,{'atm_call': '303.2'},3068
+ selling atm put option 
+ 375.75,{'atm_call': '303.2', 'atm_put': '375.75'},3443
+ buying atm put option 
+ 404.35,{'atm_call': '303.2'},3039
+ selling atm put option 
+ 393.75,{'atm_call': '303.2', 'atm_put': '393.75'},3432
+ buying atm put option 
+ 371.9,{'atm_call': '303.2'},3061
+ selling atm put option 
+ 383.15,{'atm_call': '303.2', 'atm_put': '383.15'},3444
+ buying atm put option 
+ 420.95,{'atm_call': '303.2'},3024
+ selling atm put option 
+ 420.25,{'atm_call': '303.2', 'atm_put': '420.25'},3444
+ buying atm put option 
+ 457.65,{'atm_call': '303.2'},2987
+ closing positions at 15:25
+ buying atm call option 
+ 207.45,{},2780
+ taking positions at 10:15
+ selling atm call and put option 
+ 344,245.65,{'atm_call': '344', 'atm_put': '245.65'},3369
+ buying atm call option 
+ 497.9,{'atm_put': '245.65'},2872
+ selling atm call option 
+ 498.3,{'atm_put': '245.65', 'atm_call': '498.3'},3370
+ buying atm call option 
+ 496.9,{'atm_put': '245.65'},2874
+ selling atm call option 
+ 495.6,{'atm_put': '245.65', 'atm_call': '495.6'},3369
+ buying atm call option 
+ 571.95,{'atm_put': '245.65'},2798
+ selling atm call option 
+ 513.4,{'atm_put': '245.65', 'atm_call': '513.4'},3311
+ buying atm call option 
+ 525,{'atm_put': '245.65'},2786
+ selling atm call option 
+ 480.9,{'atm_put': '245.65', 'atm_call': '480.9'},3266
+ buying atm call option 
+ 535.9,{'atm_put': '245.65'},2731
+ closing positions at 15:25
+ buying atm put option 
+ 83.3,{},2648
+ taking positions at 10:15
+ selling atm call and put option 
+ 241.7,234,{'atm_call': '241.7', 'atm_put': '234'},3123
+ buying atm put option 
+ 334.3,{'atm_call': '241.7'},2789
+ selling atm put option 
+ 254.9,{'atm_call': '241.7', 'atm_put': '254.9'},3043
+ buying atm put option 
+ 253.85,{'atm_call': '241.7'},2790
+ selling atm put option 
+ 214.7,{'atm_call': '241.7', 'atm_put': '214.7'},3004
+ closing positions at 15:25
+ buying atm call option 
+ 206.15,{'atm_put': '214.7'},2798
+ buying atm put option 
+ 210.9,{},2588
+ taking positions at 10:15
+ selling atm call and put option 
+ 250.25,114.4,{'atm_call': '250.25', 'atm_put': '114.4'},2952
+ buying atm call option 
+ 280.4,{'atm_put': '114.4'},2672
+ selling atm call option 
+ 298.7,{'atm_put': '114.4', 'atm_call': '298.7'},2970
+ buying atm call option 
+ 294.95,{'atm_put': '114.4'},2676
+ selling atm call option 
+ 287.75,{'atm_put': '114.4', 'atm_call': '287.75'},2963
+ buying atm call option 
+ 288.95,{'atm_put': '114.4'},2675
+ selling atm call option 
+ 270.65,{'atm_put': '114.4', 'atm_call': '270.65'},2945
+ buying atm call option 
+ 279,{'atm_put': '114.4'},2666
+ closing positions at 15:25
+ buying atm put option 
+ 41.9,{},2625
+ taking positions at 10:15
+ selling atm call and put option 
+ 354.25,271.5,{'atm_call': '354.25', 'atm_put': '271.5'},3250
+ buying atm put option 
+ 299.8,{'atm_call': '354.25'},2951
+ closing positions at 15:25
+ buying atm call option 
+ 208.6,{},2743
+ taking positions at 10:15
+ selling atm call and put option 
+ 539.7,122.25,{'atm_call': '539.7', 'atm_put': '122.25'},3404
+ buying atm call option 
+ 593.8,{'atm_put': '122.25'},2811
+ closing positions at 15:25
+ buying atm put option 
+ 77,{},2734
+ taking positions at 10:15
+ selling atm call and put option 
+ 359.35,116.2,{'atm_call': '359.35', 'atm_put': '116.2'},3209
+ buying atm put option 
+ 227.1,{'atm_call': '359.35'},2982
+ selling atm put option 
+ 202.4,{'atm_call': '359.35', 'atm_put': '202.4'},3184
+ buying atm put option 
+ 214.1,{'atm_call': '359.35'},2970
+ selling atm put option 
+ 209,{'atm_call': '359.35', 'atm_put': '209'},3179
+ buying atm put option 
+ 199.15,{'atm_call': '359.35'},2980
+ selling atm put option 
+ 214.05,{'atm_call': '359.35', 'atm_put': '214.05'},3194
+ buying atm put option 
+ 221.2,{'atm_call': '359.35'},2973
+ selling atm put option 
+ 211.8,{'atm_call': '359.35', 'atm_put': '211.8'},3184
+ buying atm put option 
+ 204.1,{'atm_call': '359.35'},2980
+ selling atm put option 
+ 192.95,{'atm_call': '359.35', 'atm_put': '192.95'},3172
+ buying atm put option 
+ 211.4,{'atm_call': '359.35'},2961
+ closing positions at 15:25
+ buying atm call option 
+ 195.4,{},2766
+ taking positions at 10:15
+ selling atm call and put option 
+ 263.5,119.2,{'atm_call': '263.5', 'atm_put': '119.2'},3148
+ buying atm call option 
+ 403.8,{'atm_put': '119.2'},2745
+ closing positions at 15:25
+ buying atm put option 
+ 26.55,{},2719
+ taking positions at 10:15
+ selling atm call and put option 
+ 306.55,333.05,{'atm_call': '306.55', 'atm_put': '333.05'},3358
+ buying atm call option 
+ 392.8,{'atm_put': '333.05'},2966
+ selling atm call option 
+ 355.35,{'atm_put': '333.05', 'atm_call': '355.35'},3321
+ buying atm put option 
+ 333.9,{'atm_call': '355.35'},2988
+ selling atm put option 
+ 330.8,{'atm_call': '355.35', 'atm_put': '330.8'},3318
+ buying atm put option 
+ 371.15,{'atm_call': '355.35'},2947
+ closing positions at 15:25
+ buying atm call option 
+ 226.55,{},2721
+ taking positions at 10:15
+ selling atm call and put option 
+ 203.7,442.8,{'atm_call': '203.7', 'atm_put': '442.8'},3366
+ buying atm put option 
+ 492.55,{'atm_call': '203.7'},2874
+ selling atm put option 
+ 440,{'atm_call': '203.7', 'atm_put': '440'},3314
+ closing positions at 15:25
+ buying atm call option 
+ 179.9,{'atm_put': '440'},3135
+ buying atm put option 
+ 433.35,{},2702
+ taking positions at 10:15
+ selling atm call and put option 
+ 395.15,164.95,{'atm_call': '395.15', 'atm_put': '164.95'},3261
+ buying atm put option 
+ 300,{'atm_call': '395.15'},2961
+ closing positions at 15:25
+ buying atm call option 
+ 111.95,{},2850
+ taking positions at 10:15
+ selling atm call and put option 
+ 315.9,273.55,{'atm_call': '315.9', 'atm_put': '273.55'},3438
+ buying atm put option 
+ 386.1,{'atm_call': '315.9'},3052
+ selling atm put option 
+ 379.7,{'atm_call': '315.9', 'atm_put': '379.7'},3431
+ buying atm put option 
+ 399,{'atm_call': '315.9'},3032
+ selling atm put option 
+ 232.55,{'atm_call': '315.9', 'atm_put': '232.55'},3264
+ buying atm put option 
+ 364.45,{'atm_call': '315.9'},2900
+ selling atm put option 
+ 287.5,{'atm_call': '315.9', 'atm_put': '287.5'},3187
+ buying atm put option 
+ 299.8,{'atm_call': '315.9'},2888
+ selling atm put option 
+ 319.25,{'atm_call': '315.9', 'atm_put': '319.25'},3207
+ closing positions at 15:25
+ buying atm call option 
+ 281.55,{'atm_put': '319.25'},2926
+ buying atm put option 
+ 290.5,{},2636
+ taking positions at 10:15
+ selling atm call and put option 
+ 215.1,201.95,{'atm_call': '215.1', 'atm_put': '201.95'},3052
+ buying atm put option 
+ 237.3,{'atm_call': '215.1'},2815
+ selling atm put option 
+ 205.8,{'atm_call': '215.1', 'atm_put': '205.8'},3020
+ buying atm put option 
+ 204.55,{'atm_call': '215.1'},2816
+ selling atm put option 
+ 209.3,{'atm_call': '215.1', 'atm_put': '209.3'},3025
+ buying atm put option 
+ 229,{'atm_call': '215.1'},2796
+ closing positions at 15:25
+ buying atm call option 
+ 21.8,{},2775
+ taking positions at 10:15
+ selling atm call and put option 
+ 384.35,613,{'atm_call': '384.35', 'atm_put': '613'},3772
+ buying atm call option 
+ 594,{'atm_put': '613'},3178
+ selling atm call option 
+ 592.4,{'atm_put': '613', 'atm_call': '592.4'},3770
+ buying atm call option 
+ 598.65,{'atm_put': '613'},3172
+ selling atm call option 
+ 540.85,{'atm_put': '613', 'atm_call': '540.85'},3712
+ buying atm call option 
+ 621.9,{'atm_put': '613'},3091
+ selling atm call option 
+ 576.95,{'atm_put': '613', 'atm_call': '576.95'},3667
+ buying atm call option 
+ 598.65,{'atm_put': '613'},3069
+ selling atm call option 
+ 590.8,{'atm_put': '613', 'atm_call': '590.8'},3659
+ buying atm call option 
+ 661.35,{'atm_put': '613'},2998
+ closing positions at 15:25
+ buying atm put option 
+ 326.55,{},2672
+ taking positions at 10:15
+ selling atm call and put option 
+ 378.15,441.6,{'atm_call': '378.15', 'atm_put': '441.6'},3491
+ buying atm put option 
+ 473,{'atm_call': '378.15'},3018
+ selling atm put option 
+ 459.75,{'atm_call': '378.15', 'atm_put': '459.75'},3477
+ buying atm put option 
+ 471.65,{'atm_call': '378.15'},3006
+ selling atm put option 
+ 447.85,{'atm_call': '378.15', 'atm_put': '447.85'},3453
+ buying atm put option 
+ 459.25,{'atm_call': '378.15'},2994
+ selling atm put option 
+ 401.7,{'atm_call': '378.15', 'atm_put': '401.7'},3395
+ buying atm call option 
+ 526,{'atm_put': '401.7'},2869
+ closing positions at 15:25
+ buying atm put option 
+ 231.95,{},2638
+ taking positions at 10:15
+ selling atm call and put option 
+ 227.25,516,{'atm_call': '227.25', 'atm_put': '516'},3381
+ buying atm put option 
+ 572.2,{'atm_call': '227.25'},2809
+ selling atm put option 
+ 527.95,{'atm_call': '227.25', 'atm_put': '527.95'},3336
+ buying atm put option 
+ 597.9,{'atm_call': '227.25'},2739
+ selling atm put option 
+ 597.7,{'atm_call': '227.25', 'atm_put': '597.7'},3336
+ buying atm put option 
+ 633.55,{'atm_call': '227.25'},2703
+ selling atm put option 
+ 529.25,{'atm_call': '227.25', 'atm_put': '529.25'},3232
+ closing positions at 15:25
+ buying atm call option 
+ 289.85,{'atm_put': '529.25'},2943
+ buying atm put option 
+ 374,{},2569
+ taking positions at 10:15
+ selling atm call and put option 
+ 370.5,272.55,{'atm_call': '370.5', 'atm_put': '272.55'},3211
+ buying atm call option 
+ 410.35,{'atm_put': '272.55'},2801
+ closing positions at 15:25
+ buying atm put option 
+ 118.7,{},2683
+ taking positions at 10:15
+ selling atm call and put option 
+ 209.05,264,{'atm_call': '209.05', 'atm_put': '264'},3156
+ closing positions at 15:25
+ buying atm call option 
+ 218.85,{'atm_put': '264'},2938
+ buying atm put option 
+ 217.8,{},2721
+ taking positions at 10:15
+ selling atm call and put option 
+ 576.65,254,{'atm_call': '576.65', 'atm_put': '254'},3551
+ buying atm call option 
+ 640,{'atm_put': '254'},2911
+ selling atm call option 
+ 603.05,{'atm_put': '254', 'atm_call': '603.05'},3514
+ buying atm call option 
+ 601.5,{'atm_put': '254'},2913
+ selling atm call option 
+ 559.4,{'atm_put': '254', 'atm_call': '559.4'},3472
+ buying atm put option 
+ 414.6,{'atm_call': '559.4'},3058
+ closing positions at 15:25
+ buying atm call option 
+ 297.6,{},2761
+ taking positions at 10:15
+ selling atm call and put option 
+ 424.8,314.95,{'atm_call': '424.8', 'atm_put': '314.95'},3499
+ buying atm call option 
+ 524.4,{'atm_put': '314.95'},2975
+ selling atm call option 
+ 442,{'atm_put': '314.95', 'atm_call': '442'},3417
+ buying atm call option 
+ 486.35,{'atm_put': '314.95'},2931
+ selling atm call option 
+ 475.2,{'atm_put': '314.95', 'atm_call': '475.2'},3406
+ buying atm put option 
+ 342.05,{'atm_call': '475.2'},3064
+ selling atm put option 
+ 349.9,{'atm_call': '475.2', 'atm_put': '349.9'},3413
+ closing positions at 15:25
+ buying atm call option 
+ 274.5,{'atm_put': '349.9'},3139
+ buying atm put option 
+ 413.55,{},2726
+ taking positions at 10:15
+ selling atm call and put option 
+ 403.8,227.05,{'atm_call': '403.8', 'atm_put': '227.05'},3356
+ buying atm put option 
+ 302.2,{'atm_call': '403.8'},3054
+ selling atm put option 
+ 307.4,{'atm_call': '403.8', 'atm_put': '307.4'},3361
+ buying atm call option 
+ 459.65,{'atm_put': '307.4'},2902
+ selling atm call option 
+ 442.85,{'atm_put': '307.4', 'atm_call': '442.85'},3344
+ buying atm call option 
+ 426.3,{'atm_put': '307.4'},2918
+ selling atm call option 
+ 358.2,{'atm_put': '307.4', 'atm_call': '358.2'},3276
+ closing positions at 15:25
+ buying atm call option 
+ 283.9,{'atm_put': '307.4'},2993
+ buying atm put option 
+ 221.6,{},2772
+ taking positions at 10:15
+ selling atm call and put option 
+ 219.5,197.4,{'atm_call': '219.5', 'atm_put': '197.4'},3188
+ buying atm put option 
+ 247.35,{'atm_call': '219.5'},2941
+ selling atm put option 
+ 215.15,{'atm_call': '219.5', 'atm_put': '215.15'},3156
+ buying atm put option 
+ 242,{'atm_call': '219.5'},2914
+ selling atm put option 
+ 189.15,{'atm_call': '219.5', 'atm_put': '189.15'},3103
+ buying atm call option 
+ 186.4,{'atm_put': '189.15'},2917
+ selling atm call option 
+ 205.45,{'atm_put': '189.15', 'atm_call': '205.45'},3122
+ closing positions at 15:25
+ buying atm call option 
+ 232.7,{'atm_put': '189.15'},2890
+ buying atm put option 
+ 110.65,{},2780
+ eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeecall3960020230406,2023-03-29 09:15:00,20230406
+ eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeecall3960020230406,2023-03-29 09:15:00,20230406
+ taking positions at 10:15
+ selling atm call and put option 
+ 492,211.55,{'atm_call': '492', 'atm_put': '211.55'},3483
+ buying atm call option 
+ 530.15,{'atm_put': '211.55'},2953
+ selling atm call option 
+ 514.55,{'atm_put': '211.55', 'atm_call': '514.55'},3467
+ buying atm call option 
+ 525.3,{'atm_put': '211.55'},2942
+ selling atm call option 
+ 524.5,{'atm_put': '211.55', 'atm_call': '524.5'},3466
+ buying atm call option 
+ 530.35,{'atm_put': '211.55'},2936
+ selling atm call option 
+ 515.45,{'atm_put': '211.55', 'atm_call': '515.45'},3451
+ buying atm call option 
+ 541.35,{'atm_put': '211.55'},2910
+ closing positions at 15:25
+ buying atm put option 
+ 159.85,{},2751
+ taking positions at 10:15
+ selling atm call and put option 
+ 297.05,232.45,{'atm_call': '297.05', 'atm_put': '232.45'},3280
+ buying atm call option 
+ 310.55,{'atm_put': '232.45'},2970
+ selling atm call option 
+ 324.55,{'atm_put': '232.45', 'atm_call': '324.55'},3294
+ buying atm call option 
+ 317,{'atm_put': '232.45'},2977
+ selling atm call option 
+ 320,{'atm_put': '232.45', 'atm_call': '320'},3297
+ buying atm call option 
+ 322.55,{'atm_put': '232.45'},2975
+ selling atm call option 
+ 321.25,{'atm_put': '232.45', 'atm_call': '321.25'},3296
+ buying atm call option 
+ 327.95,{'atm_put': '232.45'},2969
+ selling atm call option 
+ 301.5,{'atm_put': '232.45', 'atm_call': '301.5'},3270
+ buying atm call option 
+ 307.6,{'atm_put': '232.45'},2963
+ selling atm call option 
+ 311.4,{'atm_put': '232.45', 'atm_call': '311.4'},3274
+ buying atm call option 
+ 309.2,{'atm_put': '232.45'},2965
+ selling atm call option 
+ 314.9,{'atm_put': '232.45', 'atm_call': '314.9'},3279
+ buying atm call option 
+ 310.45,{'atm_put': '232.45'},2969
+ selling atm call option 
+ 336.25,{'atm_put': '232.45', 'atm_call': '336.25'},3305
+ buying atm call option 
+ 338,{'atm_put': '232.45'},2967
+ closing positions at 15:25
+ buying atm put option 
+ 126.45,{},2841
+ taking positions at 10:15
+ selling atm call and put option 
+ 170.1,185.6,{'atm_call': '170.1', 'atm_put': '185.6'},3196
+ buying atm call option 
+ 179,{'atm_put': '185.6'},3017
+ selling atm call option 
+ 189,{'atm_put': '185.6', 'atm_call': '189'},3206
+ buying atm call option 
+ 247.8,{'atm_put': '185.6'},2959
+ selling atm call option 
+ 193.2,{'atm_put': '185.6', 'atm_call': '193.2'},3152
+ buying atm call option 
+ 193.25,{'atm_put': '185.6'},2959
+ selling atm call option 
+ 194,{'atm_put': '185.6', 'atm_call': '194'},3153
+ buying atm call option 
+ 201.6,{'atm_put': '185.6'},2952
+ selling atm call option 
+ 205.6,{'atm_put': '185.6', 'atm_call': '205.6'},3157
+ closing positions at 15:25
+ buying atm call option 
+ 204.05,{'atm_put': '185.6'},2953
+ buying atm put option 
+ 106.4,{},2847
+ taking positions at 10:15
+ selling atm call and put option 
+ 466.3,198.9,{'atm_call': '466.3', 'atm_put': '198.9'},3511
+ buying atm call option 
+ 506.05,{'atm_put': '198.9'},3005
+ selling atm call option 
+ 457.5,{'atm_put': '198.9', 'atm_call': '457.5'},3462
+ closing positions at 15:25
+ buying atm call option 
+ 356.85,{'atm_put': '198.9'},3106
+ buying atm put option 
+ 182.7,{},2924
+ taking positions at 10:15
+ selling atm call and put option 
+ 156.85,318.65,{'atm_call': '156.85', 'atm_put': '318.65'},3398
+ buying atm put option 
+ 325.7,{'atm_call': '156.85'},3073
+ selling atm put option 
+ 309,{'atm_call': '156.85', 'atm_put': '309'},3382
+ buying atm put option 
+ 327,{'atm_call': '156.85'},3055
+ selling atm put option 
+ 320.8,{'atm_call': '156.85', 'atm_put': '320.8'},3375
+ buying atm put option 
+ 331.45,{'atm_call': '156.85'},3044
+ selling atm put option 
+ 332.25,{'atm_call': '156.85', 'atm_put': '332.25'},3376
+ buying atm put option 
+ 331.95,{'atm_call': '156.85'},3045
+ selling atm put option 
+ 309.85,{'atm_call': '156.85', 'atm_put': '309.85'},3354
+ buying atm put option 
+ 422.9,{'atm_call': '156.85'},2932
+ closing positions at 15:25
+ buying atm call option 
+ 116.8,{},2816
+ taking positions at 10:15
+ selling atm call and put option 
+ 239.75,151.2,{'atm_call': '239.75', 'atm_put': '151.2'},3206
+ buying atm call option 
+ 267.05,{'atm_put': '151.2'},2939
+ selling atm call option 
+ 244,{'atm_put': '151.2', 'atm_call': '244'},3183
+ buying atm call option 
+ 237.85,{'atm_put': '151.2'},2946
+ selling atm call option 
+ 218.25,{'atm_put': '151.2', 'atm_call': '218.25'},3164
+ buying atm call option 
+ 276.25,{'atm_put': '151.2'},2888
+ selling atm call option 
+ 214.35,{'atm_put': '151.2', 'atm_call': '214.35'},3102
+ buying atm call option 
+ 233.75,{'atm_put': '151.2'},2869
+ closing positions at 15:25
+ buying atm put option 
+ 102.4,{},2767
+ taking positions at 10:15
+ selling atm call and put option 
+ 153.3,143,{'atm_call': '153.3', 'atm_put': '143'},3063
+ buying atm call option 
+ 180.4,{'atm_put': '143'},2883
+ selling atm call option 
+ 181.75,{'atm_put': '143', 'atm_call': '181.75'},3064
+ buying atm call option 
+ 175.3,{'atm_put': '143'},2889
+ selling atm call option 
+ 171.4,{'atm_put': '143', 'atm_call': '171.4'},3060
+ buying atm call option 
+ 160,{'atm_put': '143'},2900
+ selling atm call option 
+ 160.25,{'atm_put': '143', 'atm_call': '160.25'},3060
+ buying atm call option 
+ 182.6,{'atm_put': '143'},2878
+ selling atm call option 
+ 202.05,{'atm_put': '143', 'atm_call': '202.05'},3080
+ buying atm call option 
+ 199.45,{'atm_put': '143'},2881
+ closing positions at 15:25
+ buying atm put option 
+ 70,{},2811
+ taking positions at 10:15
+ selling atm call and put option 
+ 340.5,235.4,{'atm_call': '340.5', 'atm_put': '235.4'},3386
+ buying atm call option 
+ 369,{'atm_put': '235.4'},3017
+ selling atm call option 
+ 393.95,{'atm_put': '235.4', 'atm_call': '393.95'},3410
+ buying atm call option 
+ 397.95,{'atm_put': '235.4'},3013
+ closing positions at 15:25
+ buying atm put option 
+ 93.25,{},2920
+ taking positions at 10:15
+ selling atm call and put option 
+ 57.5,732.5,{'atm_call': '57.5', 'atm_put': '732.5'},3709
+ closing positions at 15:25
+ buying atm call option 
+ 97.15,{'atm_put': '732.5'},3612
+ buying atm put option 
+ 420.1,{},3192
+ taking positions at 10:15
+ selling atm call and put option 
+ 174.25,229.3,{'atm_call': '174.25', 'atm_put': '229.3'},3595
+ buying atm call option 
+ 218.45,{'atm_put': '229.3'},3377
+ selling atm call option 
+ 219.6,{'atm_put': '229.3', 'atm_call': '219.6'},3596
+ buying atm call option 
+ 205.85,{'atm_put': '229.3'},3391
+ selling atm call option 
+ 207.4,{'atm_put': '229.3', 'atm_call': '207.4'},3598
+ buying atm call option 
+ 226.5,{'atm_put': '229.3'},3372
+ selling atm call option 
+ 187.9,{'atm_put': '229.3', 'atm_call': '187.9'},3559
+ buying atm put option 
+ 321,{'atm_call': '187.9'},3238
+ selling atm put option 
+ 248.15,{'atm_call': '187.9', 'atm_put': '248.15'},3486
+ buying atm put option 
+ 281.1,{'atm_call': '187.9'},3205
+ selling atm put option 
+ 189.35,{'atm_call': '187.9', 'atm_put': '189.35'},3394
+ buying atm put option 
+ 247.85,{'atm_call': '187.9'},3147
+ closing positions at 15:25
+ buying atm call option 
+ 137.7,{},3010
+ taking positions at 10:15
+ selling atm call and put option 
+ 162.3,163,{'atm_call': '162.3', 'atm_put': '163'},3335
+ buying atm put option 
+ 201.4,{'atm_call': '162.3'},3134
+ selling atm put option 
+ 188.65,{'atm_call': '162.3', 'atm_put': '188.65'},3322
+ buying atm put option 
+ 186.3,{'atm_call': '162.3'},3136
+ selling atm put option 
+ 186.85,{'atm_call': '162.3', 'atm_put': '186.85'},3322
+ buying atm put option 
+ 191.2,{'atm_call': '162.3'},3131
+ selling atm put option 
+ 180,{'atm_call': '162.3', 'atm_put': '180'},3311
+ buying atm put option 
+ 161.55,{'atm_call': '162.3'},3150
+ selling atm put option 
+ 164.8,{'atm_call': '162.3', 'atm_put': '164.8'},3314
+ buying atm put option 
+ 240,{'atm_call': '162.3'},3074
+ selling atm put option 
+ 174.8,{'atm_call': '162.3', 'atm_put': '174.8'},3248
+ buying atm put option 
+ 194.5,{'atm_call': '162.3'},3054
+ selling atm put option 
+ 178.1,{'atm_call': '162.3', 'atm_put': '178.1'},3232
+ buying atm put option 
+ 192.65,{'atm_call': '162.3'},3040
+ selling atm put option 
+ 151.1,{'atm_call': '162.3', 'atm_put': '151.1'},3191
+ closing positions at 15:25
+ buying atm call option 
+ 111.8,{'atm_put': '151.1'},3080
+ buying atm put option 
+ 160.4,{},2920
+ taking positions at 10:15
+ selling atm call and put option 
+ 363.65,257.1,{'atm_call': '363.65', 'atm_put': '257.1'},3540
+ closing positions at 15:25
+ buying atm call option 
+ 319.95,{'atm_put': '257.1'},3221
+ buying atm put option 
+ 246.9,{},2975
+ taking positions at 10:15
+ selling atm call and put option 
+ 287.65,253.75,{'atm_call': '287.65', 'atm_put': '253.75'},3515
+ buying atm put option 
+ 257.45,{'atm_call': '287.65'},3258
+ selling atm put option 
+ 255.5,{'atm_call': '287.65', 'atm_put': '255.5'},3513
+ buying atm put option 
+ 268,{'atm_call': '287.65'},3245
+ closing positions at 15:25
+ buying atm call option 
+ 213.2,{},3032
+ taking positions at 10:15
+ selling atm call and put option 
+ 188.85,249.15,{'atm_call': '188.85', 'atm_put': '249.15'},3469
+ buying atm call option 
+ 282.85,{'atm_put': '249.15'},3187
+ closing positions at 15:25
+ buying atm put option 
+ 112.95,{},3075
+ taking positions at 10:15
+ selling atm call and put option 
+ 232.75,144,{'atm_call': '232.75', 'atm_put': '144'},3451
+ buying atm call option 
+ 241,{'atm_put': '144'},3210
+ selling atm call option 
+ 224.6,{'atm_put': '144', 'atm_call': '224.6'},3434
+ buying atm call option 
+ 234.5,{'atm_put': '144'},3200
+ selling atm call option 
+ 228.75,{'atm_put': '144', 'atm_call': '228.75'},3428
+ buying atm call option 
+ 242.85,{'atm_put': '144'},3186
+ selling atm call option 
+ 237.55,{'atm_put': '144', 'atm_call': '237.55'},3423
+ buying atm call option 
+ 238.7,{'atm_put': '144'},3185
+ selling atm call option 
+ 228.95,{'atm_put': '144', 'atm_call': '228.95'},3413
+ buying atm call option 
+ 225,{'atm_put': '144'},3188
+ selling atm call option 
+ 177.95,{'atm_put': '144', 'atm_call': '177.95'},3365
+ buying atm call option 
+ 227.75,{'atm_put': '144'},3138
+ selling atm call option 
+ 220.9,{'atm_put': '144', 'atm_call': '220.9'},3358
+ buying atm call option 
+ 235,{'atm_put': '144'},3123
+ selling atm call option 
+ 209.7,{'atm_put': '144', 'atm_call': '209.7'},3332
+ closing positions at 15:25
+ buying atm call option 
+ 147.95,{'atm_put': '144'},3185
+ buying atm put option 
+ 178.95,{},3007
+ taking positions at 10:15
+ selling atm call and put option 
+ 177.25,123.2,{'atm_call': '177.25', 'atm_put': '123.2'},3307
+ buying atm call option 
+ 239.25,{'atm_put': '123.2'},3068
+ closing positions at 15:25
+ buying atm put option 
+ 31.75,{},3037
+ taking positions at 10:15
+ selling atm call and put option 
+ 385.55,245.6,{'atm_call': '385.55', 'atm_put': '245.6'},3667
+ buying atm call option 
+ 448.55,{'atm_put': '245.6'},3219
+ selling atm call option 
+ 440.85,{'atm_put': '245.6', 'atm_call': '440.85'},3659
+ buying atm call option 
+ 445.95,{'atm_put': '245.6'},3214
+ selling atm call option 
+ 428.4,{'atm_put': '245.6', 'atm_call': '428.4'},3642
+ buying atm call option 
+ 419,{'atm_put': '245.6'},3223
+ selling atm call option 
+ 415.2,{'atm_put': '245.6', 'atm_call': '415.2'},3638
+ buying atm call option 
+ 423.75,{'atm_put': '245.6'},3215
+ closing positions at 15:25
+ buying atm put option 
+ 169.25,{},3046
+ taking positions at 10:15
+ selling atm call and put option 
+ 385.55,245.6,{'atm_call': '385.55', 'atm_put': '245.6'},3676
+ buying atm call option 
+ 448.55,{'atm_put': '245.6'},3228
+ selling atm call option 
+ 440.85,{'atm_put': '245.6', 'atm_call': '440.85'},3668
+ buying atm call option 
+ 445.95,{'atm_put': '245.6'},3223
+ selling atm call option 
+ 428.4,{'atm_put': '245.6', 'atm_call': '428.4'},3651
+ buying atm call option 
+ 419,{'atm_put': '245.6'},3232
+ selling atm call option 
+ 415.2,{'atm_put': '245.6', 'atm_call': '415.2'},3647
+ buying atm call option 
+ 423.75,{'atm_put': '245.6'},3224
+ closing positions at 15:25
+ buying atm put option 
+ 169.25,{},3055
+ taking positions at 10:15
+ selling atm call and put option 
+ 207,350.6,{'atm_call': '207', 'atm_put': '350.6'},3612
+ buying atm put option 
+ 343.2,{'atm_call': '207'},3269
+ selling atm put option 
+ 325.65,{'atm_call': '207', 'atm_put': '325.65'},3594
+ buying atm put option 
+ 339.1,{'atm_call': '207'},3255
+ selling atm put option 
+ 295.9,{'atm_call': '207', 'atm_put': '295.9'},3550
+ buying atm call option 
+ 372.8,{'atm_put': '295.9'},3178
+ closing positions at 15:25
+ buying atm put option 
+ 137.25,{},3041
+ taking positions at 10:15
+ selling atm call and put option 
+ 250.1,151.5,{'atm_call': '250.1', 'atm_put': '151.5'},3442
+ buying atm call option 
+ 272.25,{'atm_put': '151.5'},3170
+ selling atm call option 
+ 267,{'atm_put': '151.5', 'atm_call': '267'},3437
+ buying atm call option 
+ 266.05,{'atm_put': '151.5'},3171
+ selling atm call option 
+ 270.2,{'atm_put': '151.5', 'atm_call': '270.2'},3441
+ buying atm put option 
+ 160,{'atm_call': '270.2'},3281
+ closing positions at 15:25
+ buying atm call option 
+ 213.1,{},3068
+ taking positions at 10:15
+ selling atm call and put option 
+ 221.2,120.65,{'atm_call': '221.2', 'atm_put': '120.65'},3409
+ buying atm call option 
+ 269.95,{'atm_put': '120.65'},3140
+ selling atm call option 
+ 235.2,{'atm_put': '120.65', 'atm_call': '235.2'},3375
+ buying atm call option 
+ 250,{'atm_put': '120.65'},3125
+ selling atm call option 
+ 231.9,{'atm_put': '120.65', 'atm_call': '231.9'},3356
+ buying atm call option 
+ 231.9,{'atm_put': '120.65'},3125
+ selling atm call option 
+ 239.35,{'atm_put': '120.65', 'atm_call': '239.35'},3364
+ buying atm call option 
+ 248.85,{'atm_put': '120.65'},3116
+ closing positions at 15:25
+ buying atm put option 
+ 66.8,{},3050
+ taking positions at 10:15
+ selling atm call and put option 
+ 360.9,245.8,{'atm_call': '360.9', 'atm_put': '245.8'},3655
+ buying atm call option 
+ 395.95,{'atm_put': '245.8'},3260
+ selling atm call option 
+ 407.3,{'atm_put': '245.8', 'atm_call': '407.3'},3667
+ buying atm call option 
+ 406.8,{'atm_put': '245.8'},3261
+ closing positions at 15:25
+ buying atm put option 
+ 110.75,{},3151
+ taking positions at 10:15
+ selling atm call and put option 
+ 569.45,98.8,{'atm_call': '569.45', 'atm_put': '98.8'},3818
+ buying atm call option 
+ 583,{'atm_put': '98.8'},3235
+ selling atm call option 
+ 551,{'atm_put': '98.8', 'atm_call': '551'},3786
+ buying atm put option 
+ 358.6,{'atm_call': '551'},3428
+ closing positions at 15:25
+ buying atm call option 
+ 133.25,{},3295
+ taking positions at 10:15
+ selling atm call and put option 
+ 575.05,94.9,{'atm_call': '575.05', 'atm_put': '94.9'},3964
+ buying atm call option 
+ 690,{'atm_put': '94.9'},3274
+ selling atm call option 
+ 690.25,{'atm_put': '94.9', 'atm_call': '690.25'},3964
+ buying atm call option 
+ 780.8,{'atm_put': '94.9'},3184
+ selling atm call option 
+ 700,{'atm_put': '94.9', 'atm_call': '700'},3884
+ buying atm call option 
+ 720.15,{'atm_put': '94.9'},3164
+ selling atm call option 
+ 625.75,{'atm_put': '94.9', 'atm_call': '625.75'},3789
+ closing positions at 15:25
+ buying atm call option 
+ 723.25,{'atm_put': '94.9'},3066
+ buying atm put option 
+ 43.55,{},3023
+ taking positions at 10:15
+ selling atm call and put option 
+ 228.9,176.95,{'atm_call': '228.9', 'atm_put': '176.95'},3427
+ buying atm call option 
+ 252.25,{'atm_put': '176.95'},3175
+ selling atm call option 
+ 240.55,{'atm_put': '176.95', 'atm_call': '240.55'},3415
+ buying atm call option 
+ 232.15,{'atm_put': '176.95'},3183
+ selling atm call option 
+ 246,{'atm_put': '176.95', 'atm_call': '246'},3429
+ buying atm call option 
+ 246.6,{'atm_put': '176.95'},3183
+ selling atm call option 
+ 229,{'atm_put': '176.95', 'atm_call': '229'},3412
+ buying atm put option 
+ 278.2,{'atm_call': '229'},3134
+ selling atm put option 
+ 274.05,{'atm_call': '229', 'atm_put': '274.05'},3408
+ buying atm put option 
+ 270.8,{'atm_call': '229'},3138
+ selling atm put option 
+ 209.1,{'atm_call': '229', 'atm_put': '209.1'},3347
+ buying atm put option 
+ 265.5,{'atm_call': '229'},3082
+ selling atm put option 
+ 251.35,{'atm_call': '229', 'atm_put': '251.35'},3333
+ buying atm put option 
+ 286.95,{'atm_call': '229'},3047
+ closing positions at 15:25
+ buying atm call option 
+ 110.2,{},2937
+ taking positions at 10:15
+ selling atm call and put option 
+ 102,357.05,{'atm_call': '102', 'atm_put': '357.05'},3396
+ closing positions at 15:25
+ buying atm call option 
+ 229.4,{'atm_put': '357.05'},3167
+ buying atm put option 
+ 90.6,{},3077
+ taking positions at 10:15
+ selling atm call and put option 
+ 349.15,306.85,{'atm_call': '349.15', 'atm_put': '306.85'},3732
+ buying atm call option 
+ 363.35,{'atm_put': '306.85'},3369
+ selling atm call option 
+ 337.5,{'atm_put': '306.85', 'atm_call': '337.5'},3706
+ buying atm call option 
+ 377.25,{'atm_put': '306.85'},3329
+ selling atm call option 
+ 335,{'atm_put': '306.85', 'atm_call': '335'},3664
+ closing positions at 15:25
+ buying atm call option 
+ 297.45,{'atm_put': '306.85'},3367
+ buying atm put option 
+ 311.95,{},3056
+ taking positions at 10:15
+ selling atm call and put option 
+ 311.05,286.5,{'atm_call': '311.05', 'atm_put': '286.5'},3653
+ buying atm call option 
+ 363.85,{'atm_put': '286.5'},3290
+ selling atm call option 
+ 328,{'atm_put': '286.5', 'atm_call': '328'},3618
+ buying atm call option 
+ 358.8,{'atm_put': '286.5'},3260
+ closing positions at 15:25
+ buying atm put option 
+ 166.8,{},3094
+ taking positions at 10:15
+ selling atm call and put option 
+ 328.95,212.8,{'atm_call': '328.95', 'atm_put': '212.8'},3634
+ buying atm call option 
+ 325.6,{'atm_put': '212.8'},3309
+ selling atm call option 
+ 326,{'atm_put': '212.8', 'atm_call': '326'},3635
+ buying atm call option 
+ 339.65,{'atm_put': '212.8'},3296
+ closing positions at 15:25
+ buying atm put option 
+ 174.3,{},3122
+ taking positions at 10:15
+ selling atm call and put option 
+ 224.7,217.5,{'atm_call': '224.7', 'atm_put': '217.5'},3563
+ closing positions at 15:25
+ buying atm call option 
+ 105.55,{'atm_put': '217.5'},3458
+ buying atm put option 
+ 318.65,{},3140
+ taking positions at 10:15
+ selling atm call and put option 
+ 171.95,177.4,{'atm_call': '171.95', 'atm_put': '177.4'},3488
+ buying atm put option 
+ 227.35,{'atm_call': '171.95'},3261
+ selling atm put option 
+ 221.5,{'atm_call': '171.95', 'atm_put': '221.5'},3482
+ buying atm put option 
+ 239.5,{'atm_call': '171.95'},3243
+ closing positions at 15:25
+ buying atm call option 
+ 66.3,{},3177
+ taking positions at 10:15
+ selling atm call and put option 
+ 285.95,359.05,{'atm_call': '285.95', 'atm_put': '359.05'},3821
+ buying atm put option 
+ 404.1,{'atm_call': '285.95'},3417
+ selling atm put option 
+ 373.35,{'atm_call': '285.95', 'atm_put': '373.35'},3790
+ buying atm put option 
+ 387,{'atm_call': '285.95'},3403
+ selling atm put option 
+ 405.95,{'atm_call': '285.95', 'atm_put': '405.95'},3808
+ buying atm put option 
+ 385.55,{'atm_call': '285.95'},3423
+ selling atm put option 
+ 402,{'atm_call': '285.95', 'atm_put': '402'},3825
+ buying atm put option 
+ 429.75,{'atm_call': '285.95'},3396
+ closing positions at 15:25
+ buying atm call option 
+ 214.15,{},3182
+ taking positions at 10:15
+ selling atm call and put option 
+ 177.4,459.7,{'atm_call': '177.4', 'atm_put': '459.7'},3818
+ buying atm call option 
+ 304.95,{'atm_put': '459.7'},3514
+ closing positions at 15:25
+ buying atm put option 
+ 216.55,{},3298
+ taking positions at 10:15
+ selling atm call and put option 
+ 241.85,255.1,{'atm_call': '241.85', 'atm_put': '255.1'},3794
+ buying atm put option 
+ 343.65,{'atm_call': '241.85'},3451
+ selling atm put option 
+ 276.6,{'atm_call': '241.85', 'atm_put': '276.6'},3727
+ buying atm put option 
+ 277.45,{'atm_call': '241.85'},3450
+ selling atm put option 
+ 234.7,{'atm_call': '241.85', 'atm_put': '234.7'},3684
+ closing positions at 15:25
+ buying atm call option 
+ 222.65,{'atm_put': '234.7'},3462
+ buying atm put option 
+ 226.7,{},3236
+ taking positions at 10:15
+ selling atm call and put option 
+ 267.05,152,{'atm_call': '267.05', 'atm_put': '152'},3655
+ buying atm call option 
+ 281.8,{'atm_put': '152'},3374
+ selling atm call option 
+ 277.5,{'atm_put': '152', 'atm_call': '277.5'},3651
+ buying atm call option 
+ 271.5,{'atm_put': '152'},3380
+ selling atm call option 
+ 263.7,{'atm_put': '152', 'atm_call': '263.7'},3643
+ buying atm call option 
+ 258.05,{'atm_put': '152'},3385
+ selling atm call option 
+ 258.1,{'atm_put': '152', 'atm_call': '258.1'},3643
+ buying atm call option 
+ 271.65,{'atm_put': '152'},3372
+ selling atm call option 
+ 282.05,{'atm_put': '152', 'atm_call': '282.05'},3654
+ buying atm call option 
+ 276.5,{'atm_put': '152'},3378
+ selling atm call option 
+ 276.9,{'atm_put': '152', 'atm_call': '276.9'},3654
+ buying atm call option 
+ 277.6,{'atm_put': '152'},3377
+ selling atm call option 
+ 270.45,{'atm_put': '152', 'atm_call': '270.45'},3647
+ buying atm call option 
+ 277.7,{'atm_put': '152'},3370
+ selling atm call option 
+ 280.7,{'atm_put': '152', 'atm_call': '280.7'},3650
+ buying atm call option 
+ 278.4,{'atm_put': '152'},3372
+ selling atm call option 
+ 254,{'atm_put': '152', 'atm_call': '254'},3626
+ closing positions at 15:25
+ buying atm call option 
+ 210.8,{'atm_put': '152'},3416
+ buying atm put option 
+ 159.6,{},3257
+ taking positions at 10:15
+ selling atm call and put option 
+ 300.1,79.1,{'atm_call': '300.1', 'atm_put': '79.1'},3636
+ buying atm call option 
+ 337.1,{'atm_put': '79.1'},3299
+ selling atm call option 
+ 324.3,{'atm_put': '79.1', 'atm_call': '324.3'},3623
+ buying atm call option 
+ 348,{'atm_put': '79.1'},3275
+ selling atm call option 
+ 297.2,{'atm_put': '79.1', 'atm_call': '297.2'},3572
+ buying atm put option 
+ 133.85,{'atm_call': '297.2'},3439
+ closing positions at 15:25
+ buying atm call option 
+ 146,{},3293
+ taking positions at 10:15
+ selling atm call and put option 
+ 343.95,345.35,{'atm_call': '343.95', 'atm_put': '345.35'},3981
+ buying atm put option 
+ 372.2,{'atm_call': '343.95'},3609
+ selling atm put option 
+ 356.05,{'atm_call': '343.95', 'atm_put': '356.05'},3965
+ buying atm put option 
+ 359,{'atm_call': '343.95'},3606
+ selling atm put option 
+ 371,{'atm_call': '343.95', 'atm_put': '371'},3977
+ buying atm put option 
+ 365.25,{'atm_call': '343.95'},3612
+ selling atm put option 
+ 366.6,{'atm_call': '343.95', 'atm_put': '366.6'},3978
+ buying atm put option 
+ 384.3,{'atm_call': '343.95'},3594
+ selling atm put option 
+ 379.25,{'atm_call': '343.95', 'atm_put': '379.25'},3973
+ buying atm put option 
+ 365.35,{'atm_call': '343.95'},3608
+ selling atm put option 
+ 365.45,{'atm_call': '343.95', 'atm_put': '365.45'},3973
+ buying atm put option 
+ 416.55,{'atm_call': '343.95'},3557
+ selling atm put option 
+ 377.55,{'atm_call': '343.95', 'atm_put': '377.55'},3934
+ buying atm put option 
+ 338.95,{'atm_call': '343.95'},3596
+ selling atm put option 
+ 354.25,{'atm_call': '343.95', 'atm_put': '354.25'},3950
+ closing positions at 15:25
+ buying atm call option 
+ 349.65,{'atm_put': '354.25'},3601
+ buying atm put option 
+ 264.1,{},3337
+ taking positions at 10:15
+ selling atm call and put option 
+ 343.95,345.35,{'atm_call': '343.95', 'atm_put': '345.35'},4025
+ buying atm put option 
+ 372.2,{'atm_call': '343.95'},3653
+ selling atm put option 
+ 356.05,{'atm_call': '343.95', 'atm_put': '356.05'},4009
+ buying atm put option 
+ 359,{'atm_call': '343.95'},3650
+ selling atm put option 
+ 371,{'atm_call': '343.95', 'atm_put': '371'},4021
+ buying atm put option 
+ 365.25,{'atm_call': '343.95'},3656
+ selling atm put option 
+ 366.6,{'atm_call': '343.95', 'atm_put': '366.6'},4022
+ buying atm put option 
+ 384.3,{'atm_call': '343.95'},3638
+ selling atm put option 
+ 379.25,{'atm_call': '343.95', 'atm_put': '379.25'},4017
+ buying atm put option 
+ 365.35,{'atm_call': '343.95'},3652
+ selling atm put option 
+ 365.45,{'atm_call': '343.95', 'atm_put': '365.45'},4017
+ buying atm put option 
+ 416.55,{'atm_call': '343.95'},3601
+ selling atm put option 
+ 377.55,{'atm_call': '343.95', 'atm_put': '377.55'},3978
+ buying atm put option 
+ 338.95,{'atm_call': '343.95'},3640
+ selling atm put option 
+ 354.25,{'atm_call': '343.95', 'atm_put': '354.25'},3994
+ closing positions at 15:25
+ buying atm call option 
+ 349.65,{'atm_put': '354.25'},3645
+ buying atm put option 
+ 264.1,{},3381
+ taking positions at 10:15
+ selling atm call and put option 
+ 252.55,311.2,{'atm_call': '252.55', 'atm_put': '311.2'},3944
+ buying atm call option 
+ 330.8,{'atm_put': '311.2'},3614
+ closing positions at 15:25
+ buying atm put option 
+ 157.8,{},3457
+ taking positions at 10:15
+ selling atm call and put option 
+ 328.05,175.85,{'atm_call': '328.05', 'atm_put': '175.85'},3960
+ buying atm call option 
+ 387.65,{'atm_put': '175.85'},3573
+ selling atm call option 
+ 382.75,{'atm_put': '175.85', 'atm_call': '382.75'},3955
+ closing positions at 15:25
+ buying atm call option 
+ 285.4,{'atm_put': '175.85'},3670
+ buying atm put option 
+ 170.95,{},3500
+ taking positions at 10:15
+ selling atm call and put option 
+ 294.65,127.4,{'atm_call': '294.65', 'atm_put': '127.4'},3921
+ buying atm call option 
+ 293.5,{'atm_put': '127.4'},3628
+ selling atm call option 
+ 299.85,{'atm_put': '127.4', 'atm_call': '299.85'},3927
+ buying atm call option 
+ 299.15,{'atm_put': '127.4'},3628
+ selling atm call option 
+ 314.1,{'atm_put': '127.4', 'atm_call': '314.1'},3942
+ buying atm call option 
+ 312.85,{'atm_put': '127.4'},3630
+ closing positions at 15:25
+ buying atm put option 
+ 84.05,{},3546
+ taking positions at 10:15
+ selling atm call and put option 
+ 96.9,238.6,{'atm_call': '96.9', 'atm_put': '238.6'},3880
+ buying atm put option 
+ 295.1,{'atm_call': '96.9'},3585
+ selling atm put option 
+ 221.2,{'atm_call': '96.9', 'atm_put': '221.2'},3806
+ closing positions at 15:25
+ buying atm call option 
+ 78.45,{'atm_put': '221.2'},3728
+ buying atm put option 
+ 200.95,{},3528
+ taking positions at 10:15
+ selling atm call and put option 
+ 331.2,292.9,{'atm_call': '331.2', 'atm_put': '292.9'},4151
+ buying atm put option 
+ 322,{'atm_call': '331.2'},3829
+ selling atm put option 
+ 353.85,{'atm_call': '331.2', 'atm_put': '353.85'},4182
+ buying atm put option 
+ 347.9,{'atm_call': '331.2'},3835
+ closing positions at 15:25
+ buying atm call option 
+ 207.95,{},3628
+ taking positions at 10:15
+ selling atm call and put option 
+ 290,285.2,{'atm_call': '290', 'atm_put': '285.2'},4203
+ buying atm put option 
+ 298.8,{'atm_call': '290'},3905
+ selling atm put option 
+ 266.6,{'atm_call': '290', 'atm_put': '266.6'},4171
+ buying atm call option 
+ 411.05,{'atm_put': '266.6'},3760
+ selling atm call option 
+ 430,{'atm_put': '266.6', 'atm_call': '430'},4190
+ buying atm call option 
+ 423.45,{'atm_put': '266.6'},3767
+ selling atm call option 
+ 394.85,{'atm_put': '266.6', 'atm_call': '394.85'},4161
+ buying atm call option 
+ 394.4,{'atm_put': '266.6'},3767
+ selling atm call option 
+ 323.7,{'atm_put': '266.6', 'atm_call': '323.7'},4090
+ closing positions at 15:25
+ buying atm call option 
+ 304,{'atm_put': '266.6'},3786
+ buying atm put option 
+ 219,{},3567
+ taking positions at 10:15
+ selling atm call and put option 
+ 309.7,160.4,{'atm_call': '309.7', 'atm_put': '160.4'},4036
+ buying atm call option 
+ 319,{'atm_put': '160.4'},3717
+ selling atm call option 
+ 322.75,{'atm_put': '160.4', 'atm_call': '322.75'},4039
+ buying atm call option 
+ 321.2,{'atm_put': '160.4'},3718
+ selling atm call option 
+ 309.25,{'atm_put': '160.4', 'atm_call': '309.25'},4027
+ buying atm call option 
+ 325.8,{'atm_put': '160.4'},3702
+ selling atm call option 
+ 303.65,{'atm_put': '160.4', 'atm_call': '303.65'},4005
+ buying atm put option 
+ 157.7,{'atm_call': '303.65'},3848
+ selling atm put option 
+ 172.1,{'atm_call': '303.65', 'atm_put': '172.1'},4020
+ closing positions at 15:25
+ buying atm call option 
+ 252,{'atm_put': '172.1'},3768
+ buying atm put option 
+ 165.7,{},3603
+ taking positions at 10:15
+ selling atm call and put option 
+ 192.6,174.25,{'atm_call': '192.6', 'atm_put': '174.25'},3969
+ buying atm put option 
+ 184.75,{'atm_call': '192.6'},3785
+ selling atm put option 
+ 188.65,{'atm_call': '192.6', 'atm_put': '188.65'},3973
+ buying atm put option 
+ 201.15,{'atm_call': '192.6'},3772
+ selling atm put option 
+ 183.05,{'atm_call': '192.6', 'atm_put': '183.05'},3955
+ buying atm put option 
+ 184.65,{'atm_call': '192.6'},3771
+ selling atm put option 
+ 183.25,{'atm_call': '192.6', 'atm_put': '183.25'},3954
+ buying atm put option 
+ 161.9,{'atm_call': '192.6'},3793
+ selling atm put option 
+ 166.1,{'atm_call': '192.6', 'atm_put': '166.1'},3959
+ buying atm put option 
+ 177.35,{'atm_call': '192.6'},3782
+ selling atm put option 
+ 164.95,{'atm_call': '192.6', 'atm_put': '164.95'},3946
+ buying atm call option 
+ 227.05,{'atm_put': '164.95'},3719
+ closing positions at 15:25
+ buying atm put option 
+ 116.55,{},3603
+ taking positions at 10:15
+ selling atm call and put option 
+ 125.7,145.9,{'atm_call': '125.7', 'atm_put': '145.9'},3873
+ buying atm put option 
+ 181.25,{'atm_call': '125.7'},3692
+ selling atm put option 
+ 143.6,{'atm_call': '125.7', 'atm_put': '143.6'},3835
+ buying atm put option 
+ 141.85,{'atm_call': '125.7'},3694
+ selling atm put option 
+ 141.55,{'atm_call': '125.7', 'atm_put': '141.55'},3835
+ closing positions at 15:25
+ buying atm call option 
+ 113.95,{'atm_put': '141.55'},3722
+ buying atm put option 
+ 135,{},3587
+ taking positions at 10:15
+ selling atm call and put option 
+ 426,209.25,{'atm_call': '426', 'atm_put': '209.25'},4222
+ buying atm call option 
+ 435.35,{'atm_put': '209.25'},3787
+ selling atm call option 
+ 430.75,{'atm_put': '209.25', 'atm_call': '430.75'},4217
+ buying atm call option 
+ 440.65,{'atm_put': '209.25'},3777
+ selling atm call option 
+ 436.45,{'atm_put': '209.25', 'atm_call': '436.45'},4213
+ buying atm call option 
+ 435.6,{'atm_put': '209.25'},3778
+ selling atm call option 
+ 439.1,{'atm_put': '209.25', 'atm_call': '439.1'},4217
+ buying atm call option 
+ 430,{'atm_put': '209.25'},3787
+ selling atm call option 
+ 400.9,{'atm_put': '209.25', 'atm_call': '400.9'},4187
+ buying atm put option 
+ 240.7,{'atm_call': '400.9'},3947
+ selling atm put option 
+ 250.15,{'atm_call': '400.9', 'atm_put': '250.15'},4197
+ buying atm put option 
+ 240.15,{'atm_call': '400.9'},3957
+ selling atm put option 
+ 237.25,{'atm_call': '400.9', 'atm_put': '237.25'},4194
+ buying atm put option 
+ 237.7,{'atm_call': '400.9'},3957
+ selling atm put option 
+ 279,{'atm_call': '400.9', 'atm_put': '279'},4236
+ buying atm put option 
+ 294.9,{'atm_call': '400.9'},3942
+ closing positions at 15:25
+ buying atm call option 
+ 232,{},3710
+ taking positions at 10:15
+ selling atm call and put option 
+ 370.55,181.5,{'atm_call': '370.55', 'atm_put': '181.5'},4261
+ closing positions at 15:25
+ buying atm call option 
+ 262.05,{'atm_put': '181.5'},3999
+ buying atm put option 
+ 228.35,{},3771
+ taking positions at 10:15
+ selling atm call and put option 
+ 226.15,216.2,{'atm_call': '226.15', 'atm_put': '216.2'},4213
+ buying atm put option 
+ 247.55,{'atm_call': '226.15'},3966
+ selling atm put option 
+ 212.55,{'atm_call': '226.15', 'atm_put': '212.55'},4178
+ closing positions at 15:25
+ buying atm call option 
+ 212.45,{'atm_put': '212.55'},3966
+ buying atm put option 
+ 199.15,{},3767
+ taking positions at 10:15
+ selling atm call and put option 
+ 387.2,72.6,{'atm_call': '387.2', 'atm_put': '72.6'},4226
+ closing positions at 15:25
+ buying atm call option 
+ 398.8,{'atm_put': '72.6'},3828
+ buying atm put option 
+ 52,{},3776
+ taking positions at 10:15
+ selling atm call and put option 
+ 126.6,177.3,{'atm_call': '126.6', 'atm_put': '177.3'},4079
+ closing positions at 15:25
+ buying atm call option 
+ 114.9,{'atm_put': '177.3'},3965
+ buying atm put option 
+ 164.1,{},3801
+ taking positions at 10:15
+ selling atm call and put option 
+ 263.55,300.6,{'atm_call': '263.55', 'atm_put': '300.6'},4364
+ buying atm put option 
+ 349.75,{'atm_call': '263.55'},4015
+ closing positions at 15:25
+ buying atm call option 
+ 101.1,{},3914
+ taking positions at 10:15
+ selling atm call and put option 
+ 416.6,137.35,{'atm_call': '416.6', 'atm_put': '137.35'},4467
+ buying atm call option 
+ 403.7,{'atm_put': '137.35'},4064
+ selling atm call option 
+ 406.85,{'atm_put': '137.35', 'atm_call': '406.85'},4470
+ buying atm call option 
+ 427,{'atm_put': '137.35'},4043
+ selling atm call option 
+ 420,{'atm_put': '137.35', 'atm_call': '420'},4463
+ buying atm call option 
+ 406.35,{'atm_put': '137.35'},4057
+ selling atm call option 
+ 412.05,{'atm_put': '137.35', 'atm_call': '412.05'},4469
+ buying atm call option 
+ 412.85,{'atm_put': '137.35'},4057
+ selling atm call option 
+ 408.45,{'atm_put': '137.35', 'atm_call': '408.45'},4465
+ buying atm call option 
+ 415.05,{'atm_put': '137.35'},4050
+ selling atm call option 
+ 411,{'atm_put': '137.35', 'atm_call': '411'},4461
+ buying atm call option 
+ 403.95,{'atm_put': '137.35'},4058
+ selling atm call option 
+ 388.7,{'atm_put': '137.35', 'atm_call': '388.7'},4446
+ buying atm call option 
+ 449.85,{'atm_put': '137.35'},3997
+ closing positions at 15:25
+ buying atm put option 
+ 85.35,{},3912
+ taking positions at 10:15
+ selling atm call and put option 
+ 162.55,247,{'atm_call': '162.55', 'atm_put': '247'},4321
+ buying atm put option 
+ 311.3,{'atm_call': '162.55'},4010
+ closing positions at 15:25
+ buying atm call option 
+ 92.75,{},3918
+ money : 3918

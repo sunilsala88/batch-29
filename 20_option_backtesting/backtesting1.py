@@ -24,7 +24,7 @@ pd.options.mode.chained_assignment = None  # default='warn'
 logging.basicConfig(filename='option_backtesting.log', filemode='w', level=logging.INFO, format=' %(message)s')  # Configuring logging
 logging.info('this is my first line')  # Logging the first line
 
-data_address='/Users/algotrading2024/batch 28/option_history.db'
+data_address='/Users/algotrading2024/batch 29/option_history.db'
 
 holidays = ['2021-01-26', '2021-03-11', '2021-03-29', '2021-04-02', '2021-04-14', '2021-04-21', '2021-05-13', '2021-07-21', '2021-08-19', '2021-09-10', '2021-10-15', '2021-11-04', '2021-11-05', '2021-11-19', '2022-01-26', '2022-03-01', '2022-03-18', '2022-04-14', '2022-04-15', '2022-05-03', '2022-08-09', '2022-08-15', '2022-08-31', '2022-10-05', '2022-10-24', '2022-10-26', '2022-11-08', '2023-01-26', '2023-03-07', '2023-03-30', '2023-04-04', '2023-04-07', '2023-04-14', '2023-04-21', '2023-05-01', '2023-06-28', '2023-08-15', '2023-09-19', '2023-10-02', '2023-10-24', '2023-11-14', '2023-11-27', '2023-12-25']
 holidays = [datetime.strptime(x, '%Y-%m-%d') for x in holidays]  # Converting holiday strings to datetime objects
@@ -92,7 +92,7 @@ def get_nearest_expiry(current_day=datetime.now()):
     return current_expiry
 
 
-a=get_nearest_expiry(datetime(2023,1,28))
+a=get_nearest_expiry(datetime(2023,1,15))
 print(a)
 
 
@@ -202,6 +202,7 @@ for month in range(1,7):
                         del portfolio['atm_call']
                         logging.info(str(atm_call_price)+','+str(portfolio)+','+str(money))
                         trades.write(start.strftime('%Y-%m-%d %H:%M:%S')+" , "+str(open_price)+'call'+end +","+'buy'+','+str(atm_call_price)+','+str(spot_price)+','+str(money)+'\n')
+
                     if 'atm_put' in list(portfolio.keys()):
                         logging.info('buying atm put option ')
                         atm_put_price=option_price_df[atm.replace('call','put')][option_price_df[atm.replace('call','put')]['datetime']==start.strftime('%Y-%m-%d %H:%M:%S')].open.values[0]
