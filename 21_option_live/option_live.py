@@ -33,7 +33,6 @@ strategy_name='iron_condor'
 ticker="SPY"
 strike_count=25
 strike_diff=1
-account_type='PAPER'
 time_zone="America/New_York"
 
 
@@ -229,12 +228,12 @@ print('hedge put option:', hedge_put_option)
 logging.info('started')
 
 # Function to store data using pickle
-def store(data, account_type):
-    pickle.dump(data, open(f'data-{dt.now(time_zone).date()}-{account_type}.pickle', 'wb'))
+def store(data):
+    pickle.dump(data, open(f'data-{dt.now(time_zone).date()}.pickle', 'wb'))
 
 # Function to load data using pickle
-def load(account_type):
-    return pickle.load(open(f'data-{dt.now(time_zone).date()}-{account_type}.pickle', 'rb'))
+def load():
+    return pickle.load(open(f'data-{dt.now(time_zone).date()}.pickle', 'rb'))
 
 # Function to place a limit order
 def take_limit_position(ticker, action, quantity, limit_price):
@@ -260,388 +259,23 @@ def take_limit_position(ticker, action, quantity, limit_price):
         print(e)
         print('unable to place order for some reason')
 
-# Load or initialize paper trading information
-if account_type == 'PAPER':
-    try:
-        paper_info = load(account_type)
-    except:
-        column_names = ['time', 'ticker', 'price', 'action', 'stop_price', 'take_profit', 'spot_price', 'quantity']
-        filled_df = pd.DataFrame(columns=column_names)
-        filled_df.set_index('time', inplace=True)
-        paper_info = {
-            'call_buy': {'name': hedge_call_option, 'flag': 0, 'buy_price': 0, 'stop_price': 0, 'profit_price': 0, 'filled_df': filled_df.copy(), 'spot': 0, 'quantity': 0, 'strike': 0},
-            'put_buy': {'name': hedge_put_option, 'flag': 0, 'buy_price': 0, 'stop_price': 0, 'profit_price': 0, 'filled_df': filled_df.copy(), 'spot': 0, 'quantity': 0, 'strike': 0},
-            'call_sell': {'name': sell_call_option, 'flag': 0, 'sell_price': 0, 'stop_price': 0, 'profit_price': 0, 'filled_df': filled_df.copy(), 'spot': 0, 'quantity': 0, 'strike': 0},
-            'put_sell': {'name': sell_put_option, 'flag': 0, 'sell_price': 0, 'stop_price': 0, 'profit_price': 0, 'filled_df': filled_df.copy(), 'spot': 0, 'quantity': 0, 'strike': 0},
-            "main_flag": 0,
-            'enter_spot_price': 0,
-            'initial_spot_price': 0,
-            'filled_df': filled_df
-        }
 
-# Load or initialize live trading information
-else:
-    try:
-        real_info = load(account_type)
-    except:
-        column_names = ['time', 'ticker', 'price', 'action', 'stop_price', 'take_profit', 'spot_price', 'quantity']
-        filled_df = pd.DataFrame(columns=column_names)
-        filled_df.set_index('time', inplace=True)
-        real_info = {
-            'call_buy': {'name': hedge_call_option, 'flag': 0, 'buy_price': 0, 'stop_price': 0, 'profit_price': 0, 'filled_df': filled_df.copy(), 'spot': 0, 'quantity': 0, 'strike': 0},
-            'put_buy': {'name': hedge_put_option, 'flag': 0, 'buy_price': 0, 'stop_price': 0, 'profit_price': 0, 'filled_df': filled_df.copy(), 'spot': 0, 'quantity': 0, 'strike': 0},
-            'call_sell': {'name': sell_call_option, 'flag': 0, 'sell_price': 0, 'stop_price': 0, 'profit_price': 0, 'filled_df': filled_df.copy(), 'spot': 0, 'quantity': 0, 'strike': 0},
-            'put_sell': {'name': sell_put_option, 'flag': 0, 'sell_price': 0, 'stop_price': 0, 'profit_price': 0, 'filled_df': filled_df.copy(), 'spot': 0, 'quantity': 0, 'strike': 0},
-            "main_flag": 0,
-            'enter_spot_price': 0,
-            'initial_spot_price': 0,
-            'filled_df': filled_df
-        }
-
-
-
-
-def paper_order(spot_price,df):
-    global quantity
-    global paper_info
- 
-  
-
-    ct = dt.now(time_zone)  # Get the current time
-
-    if ct > start_time:  # Check if the current time is after the start time
-
-        # Get the option names from paper_info
-        call_buy_name = paper_info.get('call_buy').get('name')
-        put_buy_name = paper_info.get('put_buy').get('name')
-        call_sell_name = paper_info.get('call_sell').get('name')
-        put_sell_name = paper_info.get('put_sell').get('name')
-
-        # Get the flags for each option
-        call_buy_flag = paper_info.get('call_buy').get('flag')
-        put_buy_flag = paper_info.get('put_buy').get('flag')
-        call_sell_flag = paper_info.get('call_sell').get('flag')
-        put_sell_flag = paper_info.get('put_sell').get('flag')
-
-        # Get the buy and sell prices for each option
-        call_buy_price = paper_info.get('call_buy').get('buy_price')
-        put_buy_price = paper_info.get('put_buy').get('buy_price')
-        call_sell_price = paper_info.get('call_sell').get('sell_price')
-        put_sell_price = paper_info.get('put_sell').get('sell_price')
-
-        # Get the current prices for each option
-        call_buy_current_price = df.loc[call_buy_name, 'trade_price']
-        put_buy_current_price = df.loc[put_buy_name, 'trade_price']
-        call_sell_current_price = df.loc[call_sell_name, 'trade_price']
-        put_sell_current_price = df.loc[put_sell_name, 'trade_price']
-
-        print(call_buy_current_price,put_buy_current_price,call_sell_current_price,put_sell_current_price)
-
-        # Get the main flag and enter spot price from paper_info
-        main_flag = paper_info['main_flag']
-        enter_spot_price = paper_info['enter_spot_price']
-
-        if ct > end_time:  # Check if the current time is after the end time
-            logging.info('closing everything')
-
-            # Close call buy position
-            if call_buy_flag == 1:
-                a = [call_buy_name, call_buy_current_price, 'SELL', 0, 0, spot_price, 0]
-                paper_info['filled_df'].loc[dt.now(time_zone)] = a
-                paper_info['call_buy']['flag'] = 5
-                paper_info['call_buy']['quantity'] = 0
-                logging.info(f'Closed call buy position: {call_buy_name} at {call_buy_current_price}')
-
-
-            # Close put buy position
-            if put_buy_flag == 1:
-                a = [put_buy_name, put_buy_current_price, 'SELL', 0, 0, spot_price, 0]
-                paper_info['filled_df'].loc[dt.now(time_zone)] = a
-                paper_info['put_buy']['flag'] = 5
-                paper_info['put_buy']['quantity'] = 0
-                logging.info(f'Closed put buy position: {put_buy_name} at {put_buy_current_price}')
-
-
-            # Close call sell position
-            if call_sell_flag == 1:
-                a = [call_sell_name, call_sell_current_price, 'BUY', 0, 0, spot_price, 0]
-                paper_info['filled_df'].loc[dt.now(time_zone)] = a
-                paper_info['call_sell']['flag'] = 5
-                paper_info['call_sell']['quantity'] = 0
-                logging.info(f'Closed call sell position: {call_sell_name} at {call_sell_current_price}')
-
-
-            # Close put sell position
-            if put_sell_flag == 1:
-                a = [put_sell_name, put_sell_current_price, 'BUY', 0, 0, spot_price, 0]
-                paper_info['filled_df'].loc[dt.now(time_zone)] = a
-                paper_info['put_sell']['flag'] = 5
-                paper_info['put_sell']['quantity'] = 0
-                logging.info(f'Closed put sell position: {put_sell_name} at {put_sell_current_price}')
-
-
-        if main_flag == 0:  # Check if the main flag is 0
-            logging.info('placing iron condor')
-
-            # Buy hedge options first
-            call_buy_name, strike = get_otm_option(spot_price, 'CE', buy_points)
-            paper_info['call_buy'].update({'name': call_buy_name, 'quantity': quantity, 'strike': strike})
-
-            put_buy_name, strike = get_otm_option(spot_price, 'PE', buy_points)
-            paper_info['put_buy'].update({'name': put_buy_name, 'quantity': quantity, 'strike': strike})
-
-            call_buy_current_price = df.loc[call_buy_name, 'trade_price']
-            put_buy_current_price = df.loc[put_buy_name, 'trade_price']
-
-            paper_info['call_buy']['buy_price'] = call_buy_current_price
-            paper_info['put_buy']['buy_price'] = put_buy_current_price
-
-            # Log the buy positions
-            a = [call_buy_name, call_buy_current_price, 'BUY', 0, 0, spot_price, quantity]
-            paper_info['filled_df'].loc[dt.now(time_zone)] = a
-            paper_info['call_buy']['flag'] = 1
-            logging.info(f'Bought call hedge: {call_buy_name} at {call_buy_current_price}')
-
-            b = [put_buy_name, put_buy_current_price, 'BUY', 0, 0, spot_price, quantity]
-            paper_info['filled_df'].loc[dt.now(time_zone)] = b
-            paper_info['put_buy']['flag'] = 1
-            logging.info(f'Bought put hedge: {put_buy_name} at {put_buy_current_price}')
-
-
-
-            # Sell the legs
-            call_sell_name, strike = get_otm_option(spot_price, 'CE', sell_points)
-            paper_info['call_sell'].update({'name': call_sell_name, 'quantity': quantity, 'strike': strike})
-
-            put_sell_name, strike = get_otm_option(spot_price, 'PE', sell_points)
-            paper_info['put_sell'].update({'name': put_sell_name, 'quantity': quantity, 'strike': strike})
-
-            call_sell_current_price = df.loc[call_sell_name, 'trade_price']
-            put_sell_current_price = df.loc[put_sell_name, 'trade_price']
-
-            paper_info['call_sell']['sell_price'] = call_sell_current_price
-            paper_info['put_sell']['sell_price'] = put_sell_current_price
-
-            # Log the sell positions
-            a = [call_sell_name, call_sell_current_price, 'SELL', 0, 0, spot_price, quantity]
-            paper_info['filled_df'].loc[dt.now(time_zone)] = a
-            paper_info['call_sell']['flag'] = 1
-            logging.info(f'Sold call leg: {call_sell_name} at {call_sell_current_price}')
-
-            b = [put_sell_name, put_sell_current_price, 'SELL', 0, 0, spot_price, quantity]
-            paper_info['filled_df'].loc[dt.now(time_zone)] = b
-            paper_info['put_sell']['flag'] = 1
-            logging.info(f'Sold put leg: {put_sell_name} at {put_sell_current_price}')
-
-            # Update the enter spot price, initial spot price, and main flag in paper_info
-            paper_info.update({'enter_spot_price': spot_price, 'initial_spot_price': spot_price, 'main_flag': 1})
-            logging.info('done placing condor')
-
-        elif main_flag == 1:  # Check if the main flag is 1
-
-            if spot_price < enter_spot_price - spot_move:
-                # Close call buy position
-                a = [call_buy_name, call_buy_current_price, 'SELL', 0, 0, spot_price, quantity]
-                paper_info['filled_df'].loc[dt.now(time_zone)] = a
-                logging.info(f'Closed call buy position: {call_buy_name} at {call_buy_current_price}')
-
-
-                # Close call sell position
-                a = [call_sell_name, call_sell_current_price, 'BUY', 0, 0, spot_price, quantity]
-                paper_info['filled_df'].loc[dt.now(time_zone)] = a
-                logging.info(f'Closed call sell position: {call_sell_name} at {call_sell_current_price}')
-
-
-                # Open new call buy position
-                s = paper_info['call_buy']['strike'] - spot_move * 2
-                call_buy_name = option_chain[(option_chain['strike_price'] == s) & (option_chain['option_type'] == 'CE')]['symbol'].squeeze()
-                paper_info['call_buy'].update({'name': call_buy_name, 'quantity': quantity, 'strike': s})
-                call_buy_current_price = df.loc[call_buy_name, 'trade_price']
-                paper_info['call_buy']['buy_price'] = call_buy_current_price
-                a = [call_buy_name, call_buy_current_price, 'BUY', 0, 0, spot_price, quantity]
-                paper_info['filled_df'].loc[dt.now(time_zone)] = a
-                paper_info['call_buy']['flag'] = 1
-                logging.info(f'Opened new call buy position: {call_buy_name} at {call_buy_current_price}')
-
-
-                # Open new call sell position
-                s = paper_info['call_sell']['strike'] - spot_move * 2
-                call_sell_name = option_chain[(option_chain['strike_price'] == s) & (option_chain['option_type'] == 'CE')]['symbol'].squeeze()
-                paper_info['call_sell'].update({'name': call_sell_name, 'quantity': quantity, 'strike': s})
-                call_sell_current_price = df.loc[call_sell_name, 'trade_price']
-                paper_info['call_sell']['sell_price'] = call_sell_current_price
-                a = [call_sell_name, call_sell_current_price, 'SELL', 0, 0, spot_price, quantity]
-                paper_info['filled_df'].loc[dt.now(time_zone)] = a
-                paper_info['call_sell']['flag'] = 1
-                logging.info(f'Opened new call sell position: {call_sell_name} at {call_sell_current_price}')
-
-                # Update the enter spot price and main flag in paper_info
-                paper_info.update({'enter_spot_price': spot_price, 'main_flag': 2})
-                logging.info('done doing adjustment')
-
-            elif spot_price > enter_spot_price + spot_move:
-                # Close put buy position
-                a = [put_buy_name, put_buy_current_price, 'SELL', 0, 0, spot_price, quantity]
-                paper_info['filled_df'].loc[dt.now(time_zone)] = a
-                logging.info(f'Closed put buy position: {put_buy_name} at {put_buy_current_price}')
-
-                # Close put sell position
-                a = [put_sell_name, put_sell_current_price, 'BUY', 0, 0, spot_price, quantity]
-                paper_info['filled_df'].loc[dt.now(time_zone)] = a
-                logging.info(f'Closed put sell position: {put_sell_name} at {put_sell_current_price}')
-
-                # Open new put buy position
-                s = paper_info['put_buy']['strike'] + spot_move * 2
-                put_buy_name = option_chain[(option_chain['strike_price'] == s) & (option_chain['option_type'] == 'PE')]['symbol'].squeeze()
-                paper_info['put_buy'].update({'name': put_buy_name, 'quantity': quantity, 'strike': s})
-                put_buy_current_price = df.loc[put_buy_name, 'trade_price']
-                paper_info['put_buy']['buy_price'] = put_buy_current_price
-                a = [put_buy_name, put_buy_current_price, 'BUY', 0, 0, spot_price, quantity]
-                paper_info['filled_df'].loc[dt.now(time_zone)] = a
-                paper_info['put_buy']['flag'] = 1
-                logging.info(f'Opened new put buy position: {put_buy_name} at {put_buy_current_price}')
-
-                # Open new put sell position
-                s = paper_info['put_sell']['strike'] + spot_move * 2
-                put_sell_name = option_chain[(option_chain['strike_price'] == s) & (option_chain['option_type'] == 'PE')]['symbol'].squeeze()
-                paper_info['put_sell'].update({'name': put_sell_name, 'quantity': quantity, 'strike': s})
-                put_sell_current_price = df.loc[put_sell_name, 'trade_price']
-                paper_info['put_sell']['sell_price'] = put_sell_current_price
-                a = [put_sell_name, put_sell_current_price, 'SELL', 0, 0, spot_price, quantity]
-                paper_info['filled_df'].loc[dt.now(time_zone)] = a
-                paper_info['put_sell']['flag'] = 1
-                logging.info(f'Opened new put sell position: {put_sell_name} at {put_sell_current_price}')
-
-                # Update the enter spot price and main flag in paper_info
-                paper_info.update({'enter_spot_price': spot_price, 'main_flag': 2})
-                logging.info('done doing adjustment')
-
-        elif main_flag == 2:  # Check if the main flag is 2
-
-            if spot_price < enter_spot_price - spot_move:
-                # Close call buy position
-                a = [call_buy_name, call_buy_current_price, 'SELL', 0, 0, spot_price, quantity]
-                paper_info['filled_df'].loc[dt.now(time_zone)] = a
-                logging.info(f'Closed call buy position: {call_buy_name} at {call_buy_current_price}')
-
-
-                # Close call sell position
-                a = [call_sell_name, call_sell_current_price, 'BUY', 0, 0, spot_price, quantity]
-                paper_info['filled_df'].loc[dt.now(time_zone)] = a
-                logging.info(f'Closed call sell position: {call_sell_name} at {call_sell_current_price}')
-
-
-                # Open new call buy position
-                s = paper_info['call_buy']['strike'] - spot_move * 2
-                call_buy_name = option_chain[(option_chain['strike_price'] == s) & (option_chain['option_type'] == 'CE')]['symbol'].squeeze()
-                paper_info['call_buy'].update({'name': call_buy_name, 'quantity': quantity, 'strike': s})
-                call_buy_current_price = df.loc[call_buy_name, 'trade_price']
-                paper_info['call_buy']['buy_price'] = call_buy_current_price
-                a = [call_buy_name, call_buy_current_price, 'BUY', 0, 0, spot_price, quantity]
-                paper_info['filled_df'].loc[dt.now(time_zone)] = a
-                paper_info['call_buy']['flag'] = 1
-                logging.info(f'Opened new call buy position: {call_buy_name} at {call_buy_current_price}')
-
-
-                # Open new call sell position
-                s = paper_info['call_sell']['strike'] - spot_move * 2
-                call_sell_name = option_chain[(option_chain['strike_price'] == s) & (option_chain['option_type'] == 'CE')]['symbol'].squeeze()
-                paper_info['call_sell'].update({'name': call_sell_name, 'quantity': quantity, 'strike': s})
-                call_sell_current_price = df.loc[call_sell_name, 'trade_price']
-                paper_info['call_sell']['sell_price'] = call_sell_current_price
-                a = [call_sell_name, call_sell_current_price, 'SELL', 0, 0, spot_price, quantity]
-                paper_info['filled_df'].loc[dt.now(time_zone)] = a
-                paper_info['call_sell']['flag'] = 1
-                logging.info(f'Opened new call sell position: {call_sell_name} at {call_sell_current_price}')
-
-                # Update the enter spot price and main flag in paper_info
-                paper_info.update({'enter_spot_price': spot_price, 'main_flag': 3})
-                logging.info('done doing adjustment')
-
-            elif spot_price > enter_spot_price + spot_move:
-                # Close put buy position
-                a = [put_buy_name, put_buy_current_price, 'SELL', 0, 0, spot_price, quantity]
-                paper_info['filled_df'].loc[dt.now(time_zone)] = a
-                logging.info(f'Closed put buy position: {put_buy_name} at {put_buy_current_price}')
-
-                # Close put sell position
-                a = [put_sell_name, put_sell_current_price, 'BUY', 0, 0, spot_price, quantity]
-                paper_info['filled_df'].loc[dt.now(time_zone)] = a
-                logging.info(f'Closed put sell position: {put_sell_name} at {put_sell_current_price}')
-
-                # Open new put buy position
-                s = paper_info['put_buy']['strike'] + spot_move * 2
-                put_buy_name = option_chain[(option_chain['strike_price'] == s) & (option_chain['option_type'] == 'PE')]['symbol'].squeeze()
-                paper_info['put_buy'].update({'name': put_buy_name, 'quantity': quantity, 'strike': s})
-                put_buy_current_price = df.loc[put_buy_name, 'trade_price']
-                paper_info['put_buy']['buy_price'] = put_buy_current_price
-                a = [put_buy_name, put_buy_current_price, 'BUY', 0, 0, spot_price, quantity]
-                paper_info['filled_df'].loc[dt.now(time_zone)] = a
-                paper_info['put_buy']['flag'] = 1
-                logging.info(f'Opened new put buy position: {put_buy_name} at {put_buy_current_price}')
-
-                # Open new put sell position
-                s = paper_info['put_sell']['strike'] + spot_move * 2
-                put_sell_name = option_chain[(option_chain['strike_price'] == s) & (option_chain['option_type'] == 'PE')]['symbol'].squeeze()
-                paper_info['put_sell'].update({'name': put_sell_name, 'quantity': quantity, 'strike': s})
-                put_sell_current_price = df.loc[put_sell_name, 'trade_price']
-                paper_info['put_sell']['sell_price'] = put_sell_current_price
-                a = [put_sell_name, put_sell_current_price, 'SELL', 0, 0, spot_price, quantity]
-                paper_info['filled_df'].loc[dt.now(time_zone)] = a
-                paper_info['put_sell']['flag'] = 1
-                logging.info(f'Opened new put sell position: {put_sell_name} at {put_sell_current_price}')
-
-                # Update the enter spot price and main flag in paper_info
-                paper_info.update({'enter_spot_price': spot_price, 'main_flag': 3})
-                logging.info('done doing adjustment')
-
-        elif main_flag == 3:  # Check if the main flag is 3
-
-            if (spot_price < paper_info['initial_spot_price'] - (3 * spot_move)) or (spot_price > paper_info['initial_spot_price'] + (3 * spot_move)):
-                logging.info('closing everything')
-
-                # Close call buy position
-                if call_buy_flag == 1:
-                    a = [call_buy_name, call_buy_current_price, 'SELL', 0, 0, spot_price, 0]
-                    paper_info['filled_df'].loc[dt.now(time_zone)] = a
-                    paper_info['call_buy']['flag'] = 5
-                    paper_info['call_buy']['quantity'] = 0
-                    logging.info(f'Closed call buy position: {call_buy_name} at {call_buy_current_price}')
-
-
-                # Close put buy position
-                if put_buy_flag == 1:
-                    a = [put_buy_name, put_buy_current_price, 'SELL', 0, 0, spot_price, 0]
-                    paper_info['filled_df'].loc[dt.now(time_zone)] = a
-                    paper_info['put_buy']['flag'] = 5
-                    paper_info['put_buy']['quantity'] = 0
-                    logging.info(f'Closed put buy position: {put_buy_name} at {put_buy_current_price}')
-
-
-                # Close call sell position
-                if call_sell_flag == 1:
-                    a = [call_sell_name, call_sell_current_price, 'BUY', 0, 0, spot_price, 0]
-                    paper_info['filled_df'].loc[dt.now(time_zone)] = a
-                    paper_info['call_sell']['flag'] = 5
-                    paper_info['call_sell']['quantity'] = 0
-                    logging.info(f'Closed call sell position: {call_sell_name} at {call_sell_current_price}')
-
-
-                # Close put sell position
-                if put_sell_flag == 1:
-                    a = [put_sell_name, put_sell_current_price, 'BUY', 0, 0, spot_price, 0]
-                    paper_info['filled_df'].loc[dt.now(time_zone)] = a
-                    paper_info['put_sell']['flag'] = 5
-                    paper_info['put_sell']['quantity'] = 0
-                    logging.info(f'Closed put sell position: {put_sell_name} at {put_sell_current_price}')
-
-
-        # Save the filled_df to a CSV file if it's not empty
-        if not paper_info['filled_df'].empty:
-            paper_info['filled_df'].to_csv(f'trades_{strategy_name}_{dt.now(time_zone).date()}.csv')
-
-        # Store the paper_info using pickle
-        store(paper_info, account_type)
+try:
+    real_info = load()
+except:
+    column_names = ['time', 'ticker', 'price', 'action', 'stop_price', 'take_profit', 'spot_price', 'quantity']
+    filled_df = pd.DataFrame(columns=column_names)
+    filled_df.set_index('time', inplace=True)
+    real_info = {
+        'call_buy': {'name': hedge_call_option, 'flag': 0, 'buy_price': 0, 'stop_price': 0, 'profit_price': 0, 'filled_df': filled_df.copy(), 'spot': 0, 'quantity': 0, 'strike': 0},
+        'put_buy': {'name': hedge_put_option, 'flag': 0, 'buy_price': 0, 'stop_price': 0, 'profit_price': 0, 'filled_df': filled_df.copy(), 'spot': 0, 'quantity': 0, 'strike': 0},
+        'call_sell': {'name': sell_call_option, 'flag': 0, 'sell_price': 0, 'stop_price': 0, 'profit_price': 0, 'filled_df': filled_df.copy(), 'spot': 0, 'quantity': 0, 'strike': 0},
+        'put_sell': {'name': sell_put_option, 'flag': 0, 'sell_price': 0, 'stop_price': 0, 'profit_price': 0, 'filled_df': filled_df.copy(), 'spot': 0, 'quantity': 0, 'strike': 0},
+        "main_flag": 0,
+        'enter_spot_price': 0,
+        'initial_spot_price': 0,
+        'filled_df': filled_df
+    }
 
 
 def real_order(spot_price,df):
@@ -1013,7 +647,7 @@ def real_order(spot_price,df):
             real_info['filled_df'].to_csv(f'trades_{strategy_name}_{dt.now(time_zone).date()}.csv')
 
         # Store the real_info using pickle
-        store(real_info, account_type)
+        store(real_info)
 
 
 
@@ -1069,27 +703,26 @@ def real_order(spot_price,df):
 
 
 
-# # import time
-# while True:
+# import time
+while True:
 
-#     ct = dt.now(time_zone)  # Get the current time
+    ct = dt.now(time_zone)  # Get the current time
 
-#     if ct.second==1:
-#         print(ct)
+    if ct.second==1:
+        print(ct)
     
-#         # get latest quotes by symbol
-#         req = StockQuotesRequest(
-#             symbol_or_symbols = [ticker],
-#         )
-#         res = stock_historical_data_client.get_stock_latest_quote(req)
-#         print(res.get(ticker))
-#         spot_price=(res.get(ticker).ask_price+res.get(ticker).bid_price)/2
-#         print(spot_price)
+        # get latest quotes by symbol
+        req = StockQuotesRequest(
+            symbol_or_symbols = [ticker],
+        )
+        res = stock_historical_data_client.get_stock_latest_quote(req)
+        print(res.get(ticker))
+        spot_price=(res.get(ticker).ask_price+res.get(ticker).bid_price)/2
+        print(spot_price)
 
-#         df=get_option_data(spot_price)
-#         print(df)
+        df=get_option_data(spot_price)
+        print(df)
 
-#         if account_type == 'PAPER':
-#             paper_order(spot_price,df)
-#         else:
-#             real_order(spot_price,df)
+        real_order(spot_price,df)
+
+            
