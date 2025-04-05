@@ -31,52 +31,52 @@ news["compound_score"] = news.headline.apply(
 # Print the data
 print(news)
 
-# # Filter out news with non-zero sentiment scores
-# news_filtered = news.loc[news["compound_score"] != 0, :]
+# Filter out news with non-zero sentiment scores
+news_filtered = news.loc[news["compound_score"] != 0, :]
 
 # print(news_filtered)
 
-# # Group news by date and count the number of news articles for each date
-# news_daily_count = news_filtered.groupby(
-#     "date")["date"].agg('count').to_frame('total_news_articles')
+# Group news by date and count the number of news articles for each date
+news_daily_count = news_filtered.groupby(
+    "date")["date"].agg('count').to_frame('total_news_articles')
+
+# Print the data
+news_daily_count.head()
+# Print the data
+print(news_daily_count)
+
+# Set the date as the index for the news_filtered dataframe
+news_filtered.set_index("date", inplace=True)
+
+# Join the total news count with the news_filtered dataframe
+news_filtered = news_filtered.join(news_daily_count, how='outer')
+
+# Print the data
+print(news_filtered)
+
+# Calculate the sentiment score by dividing the compound score by the total news articles for each date
+news_filtered["sentiment_score"] = news_filtered["compound_score"] / news_filtered["total_news_articles"]
 
 # # Print the data
-# news_daily_count.head()
-# # Print the data
-# print(news_daily_count)
+print(news_filtered)
 
-# # Set the date as the index for the news_filtered dataframe
-# news_filtered.set_index("date", inplace=True)
+# Sum the sentiment scores for each date
+sum_of_sentiments = news_filtered.sentiment_score.groupby("date").sum()
 
-# # Join the total news count with the news_filtered dataframe
-# news_filtered = news_filtered.join(news_daily_count, how='outer')
+# Print the data
+print(sum_of_sentiments)
 
-# # Print the data
-# print(news_filtered)
+# Create the dataframe `daily_sentiment_data`
+daily_sentiment_data = pd.DataFrame()
 
-# # Calculate the sentiment score by dividing the compound score by the total news articles for each date
-# news_filtered["sentiment_score"] = news_filtered["compound_score"] / news_filtered["total_news_articles"]
+# Calculate the mean total news articles for each date
+daily_sentiment_data = news_filtered.groupby("date")[["total_news_articles"]].mean()
 
-# # Print the data
-# print(news_filtered)
+# Add the sum of sentiment scores to the daily_sentiment_data dataframe
+daily_sentiment_data["sentiment_score"] = sum_of_sentiments
 
-# # Sum the sentiment scores for each date
-# sum_of_sentiments = news_filtered.sentiment_score.groupby("date").sum()
-
-# # Print the data
-# print(sum_of_sentiments)
-
-# # Create the dataframe `daily_sentiment_data`
-# daily_sentiment_data = pd.DataFrame()
-
-# # Calculate the mean total news articles for each date
-# daily_sentiment_data = news_filtered.groupby("date")[["total_news_articles"]].mean()
-
-# # Add the sum of sentiment scores to the daily_sentiment_data dataframe
-# daily_sentiment_data["sentiment_score"] = sum_of_sentiments
-
-# # Print the data
-# print(daily_sentiment_data)
+# Print the data
+print(daily_sentiment_data)
 
 
 # # daily_sentiment_data.to_csv('daily_sentiment_scores_2016_jan_2023_sep.csv')
