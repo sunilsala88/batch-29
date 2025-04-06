@@ -79,4 +79,4 @@ daily_sentiment_data["sentiment_score"] = sum_of_sentiments
 print(daily_sentiment_data)
 
 
-# # daily_sentiment_data.to_csv('daily_sentiment_scores_2016_jan_2023_sep.csv')
+daily_sentiment_data.to_csv('daily_sentiment_scores_2016_jan_2023_sep.csv')
